@@ -1,5 +1,3 @@
-import s from "./Content.module.scss";
-import ProductSection from './../../components/product-section/ProductSection';
 import moto from "./../../assets/images/moto.png";
 import jetSki from "./../../assets/images/jet-ski.png";
 import boat from "./../../assets/images/boat.png";
@@ -7,7 +5,6 @@ import snowMoto from "./../../assets/images/snow-moto.png";
 import allMoto from "./../../assets/images/all-moto.png";
 import engines from "./../../assets/images/engines.png";
 import Products from "./products/Products";
-
 
 
 function Content(props) {
@@ -42,8 +39,8 @@ function Content(props) {
     link:"engines"
   }
   return (
-        <div className={s.content}>
-            <Products data={data} data2={data2} data3={data3} data4={data4} data5={data5} data6={data6}/>
+        <div className=''>
+            <Products data={sectionData} data2={sectionData2} data3={sectionData3} data4={sectionData4} data5={sectionData5} data6={sectionData6}/>
         </div>
   );
 }
