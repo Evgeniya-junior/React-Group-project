@@ -5,7 +5,8 @@ import snowMoto from "./../../assets/images/snow-moto.png";
 import allMoto from "./../../assets/images/all-moto.png";
 import engines from "./../../assets/images/engines.png";
 import Products from "./products/Products";
-
+import s from "./Content.module.scss";
+import SliderBaner from "./slider-baner/SliderBaner";
 
 function Content(props) {
   const sectionData={
@@ -39,9 +40,17 @@ function Content(props) {
     link:"engines"
   }
   return (
-        <div className=''>
+    <div className={s.content}>
+      <section className={s.sliderBaner}>
+        <SliderBaner/>
+      </section>
+      
+      <section className={s.products}>
             <Products data={sectionData} data2={sectionData2} data3={sectionData3} data4={sectionData4} data5={sectionData5} data6={sectionData6}/>
-        </div>
+      </section>
+    </div>
+        
+        
   );
 }
 
