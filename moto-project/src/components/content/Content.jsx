@@ -7,6 +7,8 @@ import engines from "./../../assets/images/engines.png";
 import Products from "./products/Products";
 import s from "./Content.module.scss";
 import SliderBaner from "./slider-baner/SliderBaner";
+import SaleBaner from "./sale-baner/SaleBaner";
+
 
 function Content(props) {
   const sectionData={
@@ -46,7 +48,11 @@ function Content(props) {
       </section>
       
       <section className={s.products}>
-            <Products data={sectionData} data2={sectionData2} data3={sectionData3} data4={sectionData4} data5={sectionData5} data6={sectionData6}/>
+        <Products data={sectionData} data2={sectionData2} data3={sectionData3} data4={sectionData4} data5={sectionData5} data6={sectionData6}/>
+      </section>
+
+      <section className={s.saleBaner}>
+        <SaleBaner data={sectionData} data5={sectionData5}/>
       </section>
     </div>
         

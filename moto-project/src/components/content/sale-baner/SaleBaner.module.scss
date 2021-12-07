@@ -1,0 +1,46 @@
+
+
+.sale{
+    background-color: #1C62CD;
+    padding-left: 45px;
+    display: grid;
+    grid-template-columns: 152px 180px 310px 1fr;
+}
+.saleAll{
+    transform: scaleX(-1);
+}
+.saleMoto,
+.saleAll{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.saleText{
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.saleButton{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.button{
+    width: 284px;
+    max-height: 57px;
+    border: none;
+    background: #FFFFFF;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 50px;
+    text-align:center;
+    color: #2F3035;
+}

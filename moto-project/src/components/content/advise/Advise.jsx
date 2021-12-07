@@ -38,7 +38,6 @@ import AdviseSection from "./../advise-section/AdviseSection"
                 image: hydroSuit,
                 headline:"Мужской костюм 3мм",
                 text:"7 000 ₽"
-              
             }
 
     return (
