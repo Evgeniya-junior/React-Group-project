@@ -5,7 +5,7 @@ import Content from './components/content/Content';
 import Advise from './components/content/advise/Advise';
 
 function App() {
- 
+
 
   return (
     <BrowserRouter>
@@ -13,8 +13,8 @@ function App() {
             <Content/>
             <Advise/>
        </div>
-        
-    </BrowserRouter> 
+
+    </BrowserRouter>
   );
 }
 export default App;
