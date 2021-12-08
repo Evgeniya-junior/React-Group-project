@@ -34,7 +34,7 @@ function Recommended(props) {
             </li>
             
          
-        </ul>
+  </ul>
         </div>
         
     );
