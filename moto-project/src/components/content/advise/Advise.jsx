@@ -16,14 +16,14 @@ import AdviseSection from "./../advise-section/AdviseSection"
                 image2: brpAudio,
                 headline:"BRP Audio-портативная система",
                 text:"нет в наличии",
-                button: "Сообщить о поступлении"
+                btn: "Сообщить о поступлении"
             }
 
             const sectionData2={
                 image: echomap,
                 headline:"Garmin Echomap Plus 62cv",
                 text:"45 800 ₽",
-                button: "#"
+                btn2: "#"
             }
             
             const sectionData3={
@@ -31,7 +31,7 @@ import AdviseSection from "./../advise-section/AdviseSection"
                 image2: rfKey,
                 headline:"RF D.E.S.S.TM Key",
                 text:"нет в наличии",
-                button: "Сообщить о поступлении"
+                btn: "Сообщить о поступлении"
             }
 
             const sectionData4={
@@ -41,8 +41,10 @@ import AdviseSection from "./../advise-section/AdviseSection"
             }
 
     return (
-        <div className=''>
+        <div className={s.advise}>
+            <section>
             <AdviseSection data={sectionData} data2={sectionData2} data3={sectionData3} data4={sectionData4}/>
+            </section>
         </div>
     );
 }
