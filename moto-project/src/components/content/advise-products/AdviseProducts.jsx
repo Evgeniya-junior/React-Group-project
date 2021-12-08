@@ -13,7 +13,7 @@ function AdviseProducts(props) {
                 <img className={s.image2} src={props.image2} alt="" />
                 <h2 className={s.headline}>{props.headline}</h2>
                 <text className={s.text}>{props.text}</text>
-                <button className={s.btn}>Сообщить о поступлении</button>
+                <button className={s.btn}>{props.btn}</button>
             </div>
     );
 }
