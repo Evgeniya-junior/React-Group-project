@@ -1,0 +1,72 @@
+@import './../../sass/vars.scss';
+@import './../../sass/mixins.scss';
+
+
+
+.header {
+   width: 100%;
+   padding-bottom: 10px;
+   padding-top: 30px;
+   display: grid;
+   grid-template-columns: 1fr 270px 1fr;
+
+   position: relative;
+
+}
+
+.menu {
+   align-self: center;
+
+
+}
+
+.logo {
+   justify-self: center;
+
+}
+
+.menuList {
+   display: flex;
+   justify-content: space-between;
+   list-style: none;
+
+   padding: 0;
+   margin: 0;
+}
+
+.social {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+.adress {
+   font-style: normal;
+   padding: 0;
+   margin: 0;
+   align-self: center;
+
+}
+
+.socialIcons {
+   padding-right: 20px;
+}
+
+.socialList {
+   display: flex;
+   list-style: none;
+}
+
+.socialItem {
+   cursor: pointer;
+}
+
+.socialItem:nth-child(2) {
+   padding-left: 10px;
+}
+
+.socialItem:last-child {
+   padding-left: 10px;
+   position: relative;
+}
