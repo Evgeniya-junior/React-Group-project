@@ -1,0 +1,24 @@
+@import './../../sass/vars.scss';
+@import './../../sass/mixins.scss';
+
+.menu {
+   background-color: #F0F0F4;
+
+}
+
+.list {
+   display: flex;
+   justify-content: space-between;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.item {
+   margin: 10px 20px 0 0;
+
+}
+
+.item:last-child {
+   margin-right: 0;
+}
