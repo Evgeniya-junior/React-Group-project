@@ -7,6 +7,9 @@
     background: #FFFFFF;
     border: 1px solid #CDCDCD;
     border-radius: 3px;
+    &:hover{
+        box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+    }
 }
 .wrapper{
     display: flex;
@@ -25,7 +28,7 @@
         display: inline-block;
         width: 6px;
         height: 9px;
-        background-image: url("../../assets/images/arrow-rigth.png");
+        background-image: url("./../../../assets/images/arrow-rigth.png");
         position: absolute;
         top: 8px;
         right: -10px;

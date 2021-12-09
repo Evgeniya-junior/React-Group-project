@@ -1,14 +1,33 @@
 
-
 .sale{
     background-color: #1C62CD;
-    padding-left: 45px;
+    padding-left: 1%;
     display: grid;
     grid-template-columns: 152px 180px 310px 1fr;
+    // @media screen and (max-width:1200px){
+    //     grid-template-columns: 152px 180px 1fr 1fr;
+    //     padding-left: 10px;
+    // }
+    // @media screen and (max-width:960px){
+    //     grid-template-columns: repeat(3,1fr);
+    //     grid-template-rows: repeat(2,1fr);  
+    //     padding-left: 0;
+    // }
 }
 .saleAll{
     transform: scaleX(-1);
+    // @media screen and (max-width:960px){
+    //     grid-column: 3/4; 
+    //     grid-row: 2/3; 
+    // }
 }
+// .saleMoto{
+//     @media screen and (max-width:960px){
+//         grid-column:1/2; 
+//         grid-row: 2/3; 
+//         justify-content: space-around;
+//     }
+// }
 .saleMoto,
 .saleAll{
     display: flex;
@@ -25,7 +44,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // @media screen and (max-width:960px){
+    //     grid-column:1/4 ; 
+    //     grid-row: 1/2; 
+    // }
 }
+// .br{
+//     @media screen and (max-width:960px){
+//         display: none;
+//     }
+// }
 .saleButton{
     display: flex;
     justify-content: start;
