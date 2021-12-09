@@ -1,4 +1,5 @@
 import './App.css';
+import './index.css';
 
 import { BrowserRouter } from 'react-router-dom';
 import Content from './components/content/Content';
@@ -8,7 +9,6 @@ import Recommended from './components/recommended/Recommended';
 import ContentCatalog from './components/content-Catalog/ContentCatalog';
 
 function App() {
-
 
   return (
     <BrowserRouter>
@@ -25,4 +25,5 @@ function App() {
     </BrowserRouter>
   );
 }
+
 export default App;
