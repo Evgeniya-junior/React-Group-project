@@ -6,9 +6,11 @@ import Filter from "./filter/Filter";
 function ContentCatalog(props) {
 return (
     <div className={s.content}>
-        <Filter/>     
+        <div className={s.container}>
+            <Filter/> 
+        </div>           
     </div>      
-  );
+    );
 }
 
 export default ContentCatalog;
