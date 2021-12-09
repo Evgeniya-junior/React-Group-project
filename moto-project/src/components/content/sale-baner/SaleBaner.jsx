@@ -16,8 +16,8 @@ function SaleBaner(props) {
                 <p className={s.text}>CКИДКИ <br/>на все запчасти<br/> до 70%</p>
             </div>
             <div className={s.saleButton}>
-                <button className={s.button}>ПОСМОТЕТЬ ВСЕ</button>
-            </div>       
+                <button className={s.button}>ПОСМОТРЕТЬ ВСЕ</button>
+            </div>
         </div>
 );
 }
