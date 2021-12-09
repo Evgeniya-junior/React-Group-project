@@ -1,23 +1,30 @@
-import * as React from 'react';
-import ReactDOM from 'react-dom';
+
+
+
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import Content from './components/content/Content';
 import Advise from './components/content/advise/Advise';
+import Header from './components/header/Header';
+import Recommended from './components/recommended/Recommended';
 import ContentCatalog from './components/content-Catalog/ContentCatalog';
 
 function App() {
- 
+
 
   return (
     <BrowserRouter>
-        <div className="App">
-            <Content/> 
-            <ContentCatalog/>
-            <Advise/>
+      <div className="App">
+        <div className="container">
+          <Header />
+          <Content />
+          <ContentCatalog/>
+          <Recommended />
+          <Advise />
         </div>
-        
-    </BrowserRouter> 
+      </div>
+
+    </BrowserRouter>
   );
 }
 export default App;
