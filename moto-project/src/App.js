@@ -1,7 +1,6 @@
-
-
-
 import './App.css';
+import './index.css';
+
 import { BrowserRouter } from 'react-router-dom';
 import Content from './components/content/Content';
 import Advise from './components/content/advise/Advise';
@@ -11,7 +10,6 @@ import ContentCatalog from './components/content-Catalog/ContentCatalog';
 import ContentProduct from './components/content-product/ContentProduct';
 
 function App() {
-
 
   return (
     <BrowserRouter>
@@ -29,4 +27,5 @@ function App() {
     </BrowserRouter>
   );
 }
+
 export default App;
