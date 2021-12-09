@@ -8,6 +8,7 @@ import Products from "./products/Products";
 import s from "./Content.module.scss";
 import SliderBaner from "./slider-baner/SliderBaner";
 import SaleBaner from "./sale-baner/SaleBaner";
+import Search from './search/Search';
 
 
 function Content(props) {
@@ -46,7 +47,11 @@ function Content(props) {
       <section className={s.sliderBaner}>
         <SliderBaner/>
       </section>
-      
+
+      <section className={s.search}>
+        <Search/>
+      </section>
+
       <section className={s.products}>
         <Products data={sectionData} data2={sectionData2} data3={sectionData3} data4={sectionData4} data5={sectionData5} data6={sectionData6}/>
       </section>
@@ -55,8 +60,8 @@ function Content(props) {
         <SaleBaner data={sectionData} data5={sectionData5}/>
       </section>
     </div>
-        
-        
+
+
   );
 }
 
