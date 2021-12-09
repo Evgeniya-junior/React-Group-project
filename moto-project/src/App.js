@@ -8,6 +8,7 @@ import Advise from './components/content/advise/Advise';
 import Header from './components/header/Header';
 import Recommended from './components/recommended/Recommended';
 import ContentCatalog from './components/content-Catalog/ContentCatalog';
+import ContentProduct from './components/content-product/ContentProduct';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Header />
           <Content />
           <ContentCatalog/>
+          <ContentProduct/>
           <Recommended />
           <Advise />
         </div>
