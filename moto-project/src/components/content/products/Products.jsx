@@ -1,5 +1,5 @@
 import s from "./Products.module.scss";
-import ProductSection from './../../product-section/ProductSection';
+import ProductSection from "./../product-section/ProductSection";
 
 
 function Products(props) {

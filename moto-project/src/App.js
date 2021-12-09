@@ -5,6 +5,7 @@ import Content from './components/content/Content';
 import Advise from './components/content/advise/Advise';
 import Header from './components/header/Header';
 import Recommended from './components/recommended/Recommended';
+import ContentCatalog from './components/content-Catalog/ContentCatalog';
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
         <div className="container">
           <Header />
           <Content />
-          <Recommended/>
+          <ContentCatalog/>
+          <Recommended />
           <Advise />
         </div>
       </div>
