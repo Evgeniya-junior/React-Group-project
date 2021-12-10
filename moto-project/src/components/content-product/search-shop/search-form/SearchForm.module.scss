@@ -1,0 +1,23 @@
+.searchForm {
+    width: 313px;
+    height: 33px;
+    position: relative;
+
+    &Input {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background-color: #F0F0F4;
+        border-radius: 3px;
+        text-indent: 17px;
+    }
+
+    &Button {
+        position: absolute;
+        right: 9px;
+        top: 8px;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
