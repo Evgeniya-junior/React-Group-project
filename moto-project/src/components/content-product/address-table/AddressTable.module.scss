@@ -1,0 +1,40 @@
+.addressTable {
+        border-spacing: 0px;
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-bottom: 100px;
+        
+        thead {
+            font-size: 20px;
+            color: #2F3035;
+        }
+
+        th {
+            text-align: left;
+            font-weight: 400;
+
+            &:nth-child(1) {
+                width: 300px;
+            }
+            
+            &:nth-child(2) {
+                width: 250px;
+            }
+
+            &:nth-child(3) {
+                width: 205px;
+            }
+
+            &:nth-child(4) {
+                width: 235px;
+            }
+
+            &:nth-child(5) {
+                width: 140px;
+            }
+        }
+
+        tbody {
+            color: #5b5b5e;
+        }
+}
