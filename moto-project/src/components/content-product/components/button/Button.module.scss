@@ -1,11 +1,14 @@
+@import './../../../../sass/vars.scss';
+
 .button {
     width: 140px;
     height: 35px;
-    background-color: #1C62CD;
+    background-color: $accentColor;
     color: #fff;
     border: 0;
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 2px;
     border-radius: 3px;
+    cursor: pointer;
 }

@@ -1,3 +1,5 @@
+@import './../../../../sass/vars.scss';
+
 .searchForm {
     width: 313px;
     height: 33px;
@@ -10,6 +12,10 @@
         background-color: #F0F0F4;
         border-radius: 3px;
         text-indent: 17px;
+
+        &:focus-visible {
+            outline: 2px solid $accentColor;
+        }
     }
 
     &Button {

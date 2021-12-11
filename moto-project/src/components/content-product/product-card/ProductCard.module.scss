@@ -1,0 +1,47 @@
+@import './../../../sass/vars.scss';
+
+.productCard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    &Rating {
+        display: flex;
+        gap: 25px;
+    }
+
+    .imageBox {
+        grid-area: 1/1/4/2;
+        padding-top: 60px;
+        position: relative;
+    }
+    .oldPrice {
+        font-size: 30px;
+        margin: 0  20px;
+        text-align: center;
+        text-decoration: line-through;
+    }
+    .price {
+        font-size: 40px;
+        font-weight: 600;
+        margin: 0;
+        text-align: center;
+    }
+    .sale {
+        width: 94px;
+        height: 44px;
+        border-radius: 3px;
+        background-color: $accentColor;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 15px;
+        letter-spacing: 12%;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
