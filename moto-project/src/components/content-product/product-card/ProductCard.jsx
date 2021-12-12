@@ -2,9 +2,13 @@ import React from 'react';
 import Button from "../components/button/Button";
 import s from "./ProductCard.module.scss";
 import ImageGidro from './../../../assets/images/content-product/product-card/gidrotsikl-brp-seedoo-gti-155hp-se-long-beach-blue-metallic-50297506898641_small6.png'
+import ChartIcon from './../../../assets/images/content-product/product-card/chart.svg';
+
 import Rating from '@mui/material/Rating';
 import { styled } from '@mui/material/styles';
 import StarIcon from '@mui/icons-material/Star';
+import CheckboxFavorite from './../components/checkbox-favorite/CheckboxFavorite';
+
 
 const StyledRating = styled(Rating)({
     '& .MuiRating-iconFilled': {
@@ -22,16 +26,22 @@ function ProductCard(props) {
             <div className={s.imageBox}>
                 <div className={s.sale}>Sale</div>
                 <img src={ImageGidro} alt="Гидроцикл" /> 
-                <p class={s.oldPrice}>1 200 475 ₽</p>
+                <del class={s.oldPrice}>1 200 475 ₽</del>
                 <p class={s.price}>1 100 475 ₽</p>
 
             </div>
             <div className={s.productCardHeader}>
                 <h1>Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</h1>
-                <span>Код товара: 	366666-2 </span>
+                <p className={s.productCardCode}>Код товара: 	366666-2 </p>
                 <div className={s.productCardRating}>
-                    <div>Сердечко</div>
-                    <div>Кнопка</div>
+                    <div>
+                        <CheckboxFavorite/>
+                    </div>
+                    <div>
+                        <button className={s.productCardButtonChart}>
+                            <img src={ChartIcon} alt="График цен" /> 
+                        </button>
+                    </div>
                     <div>
                         <StyledRating 
                             name="read-only" 

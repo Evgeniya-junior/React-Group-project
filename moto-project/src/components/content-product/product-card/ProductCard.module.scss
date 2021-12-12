@@ -5,9 +5,21 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 
+    &Code {
+        margin-bottom: 20px;
+    }
+
     &Rating {
         display: flex;
-        gap: 25px;
+        gap: 18px;
+        align-items: center;
+        margin-left: -9px;
+    }
+
+    &ButtonChart {
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
     }
 
     .imageBox {
@@ -17,9 +29,21 @@
     }
     .oldPrice {
         font-size: 30px;
-        margin: 0  20px;
-        text-align: center;
-        text-decoration: line-through;
+        margin: 0  auto;
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        &:before {
+            content: "";
+            border-bottom: 1px solid #2F3035;
+            position: absolute;
+            width: 92%;
+            height: 50%;
+            transform: rotate(-9deg);
+        }
     }
     .price {
         font-size: 40px;
