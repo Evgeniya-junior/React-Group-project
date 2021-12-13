@@ -9,6 +9,7 @@ import s from "./Content.module.scss";
 import SliderBaner from "./slider-baner/SliderBaner";
 import SaleBaner from "./sale-baner/SaleBaner";
 import Search from './search/Search';
+import PopularProducts from './popular-products/PopularProducts';
 
 
 function Content(props) {
@@ -54,6 +55,10 @@ function Content(props) {
 
       <section className={s.products}>
         <Products data={sectionData} data2={sectionData2} data3={sectionData3} data4={sectionData4} data5={sectionData5} data6={sectionData6}/>
+      </section>
+
+      <section className={s.popularProducts}>
+        <PopularProducts/>
       </section>
 
       <section className={s.saleBaner}>
