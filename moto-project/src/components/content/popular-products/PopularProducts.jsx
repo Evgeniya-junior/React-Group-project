@@ -3,7 +3,7 @@ import Swiper from './../swiper/Swiper';
 
 function PopularProducts(props) {
     return (
-        <>
+        <div className={s.container}>
                 <h2 className={s.title}>Популярные товары</h2>
 
                 <ul className={s.list}>
@@ -18,8 +18,7 @@ function PopularProducts(props) {
                 <Swiper/>
 
                 <button className={s.button} type='button'>Показать еще</button>
-        </>
-
+        </div>
     );
 }
 
