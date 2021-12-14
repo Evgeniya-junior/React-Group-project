@@ -5,6 +5,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 
+    &Title {
+        margin: 0 0 10px;
+    }
+
     &Code {
         margin-bottom: 20px;
     }
