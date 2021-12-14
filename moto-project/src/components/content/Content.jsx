@@ -1,3 +1,5 @@
+import s from "./Content.module.scss";
+
 import moto from "./../../assets/images/moto.png";
 import jetSki from "./../../assets/images/jet-ski.png";
 import boat from "./../../assets/images/boat.png";
@@ -5,7 +7,6 @@ import snowMoto from "./../../assets/images/snow-moto.png";
 import allMoto from "./../../assets/images/all-moto.png";
 import engines from "./../../assets/images/engines.png";
 import Products from "./products/Products";
-import s from "./Content.module.scss";
 import SliderBaner from "./slider-baner/SliderBaner";
 import SaleBaner from "./sale-baner/SaleBaner";
 import Search from './search/Search';
