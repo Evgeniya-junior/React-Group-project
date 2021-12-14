@@ -4,19 +4,23 @@ import saleIcon from "./../../../assets/images/saleIcon.png";
 import echomap from "./../../../assets/images/echomap.png";
 import rfKey from "./../../../assets/images/rf-key.png";
 import hydroSuit from "./../../../assets/images/hydro-suit.png";
-import AdviseSection from "./../advise-section/AdviseSection"
+import AdviseSection from "./../advise-section/AdviseSection";
+import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
+
 
 
 
 
 
 function Advise(props) {
+    const icon = { inputProps: { 'aria-label': 'FavoriteBorder  controlled' } };
+
     const sectionData = {
         image: saleIcon,
         image2: brpAudio,
         headline: "BRP Audio-портативная система",
         text: "нет в наличии",
-        btn: "Сообщить о поступлении"
+        link2: "Сообщить о поступлении"
     }
 
     const sectionData2 = {
@@ -31,7 +35,7 @@ function Advise(props) {
         image2: rfKey,
         headline: "RF D.E.S.S.TM Key",
         text: "нет в наличии",
-        btn: "Сообщить о поступлении"
+        link2: "Сообщить о поступлении"
     }
 
 
@@ -45,7 +49,9 @@ function Advise(props) {
         <div className={s.advise}>
             <section>
                 <AdviseSection data={sectionData} data2={sectionData2} data3={sectionData3} data4={sectionData4} />
+                <FavoriteBorder  {...icon}/>
             </section>
+
         </div>
     );
 }
