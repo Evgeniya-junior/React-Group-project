@@ -31,7 +31,7 @@ function ProductCard(props) {
 
             </div>
             <div className={s.productCardHeader}>
-                <h1>Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</h1>
+                <h1 className={s.productCardTitle}>Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</h1>
                 <p className={s.productCardCode}>Код товара: 	366666-2 </p>
                 <div className={s.productCardRating}>
                     <div>

@@ -4,3 +4,12 @@
     width: 100%;
     padding: 0 15px;
 }
+
+/* .swiper-button-prev, .swiper-button-next {
+    color: #2F3035!important;
+} */
+
+:root {
+    --swiper-navigation-size: 28px!important;
+    --swiper-navigation-color: #2F3035;
+}
