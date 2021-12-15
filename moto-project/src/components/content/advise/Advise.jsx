@@ -16,34 +16,33 @@ function Advise(props) {
     const icon = { inputProps: { 'aria-label': 'FavoriteBorder  controlled' } };
 
     const sectionData = {
-        image: saleIcon,
-        image2: brpAudio,
-        headline: "BRP Audio-портативная система",
-        text: "нет в наличии",
-        link2: "Сообщить о поступлении"
+        image: brpAudio,
+        price: "45 800 ₽",
+        title: "BRP Audio-портативная система",
+        inStock: true,
+        sale: false
     }
-
     const sectionData2 = {
         image: echomap,
-        headline: "Garmin Echomap Plus 62cv",
-        text: "45 800 ₽",
-        btn2: "#"
+        title: "Garmin Echomap Plus 62cv",
+        price: "45 800 ₽",
+        inStock: false,
+        sale: false
     }
 
     const sectionData3 = {
-        image: saleIcon,
-        image2: rfKey,
-        headline: "RF D.E.S.S.TM Key",
-        text: "нет в наличии",
-        link2: "Сообщить о поступлении"
+        image: rfKey,
+        title: "RF D.E.S.S.TM Key",
+        inStock: true,
+        sale: true
     }
-
 
     const sectionData4 = {
         image: hydroSuit,
-        headline: "Мужской костюм 3мм",
-        text: "7 000 ₽"
+        title: "Мужской костюм 3мм",
+        price: "7 000 ₽",
     }
+
 
     return (
         <div className={s.advise}>
