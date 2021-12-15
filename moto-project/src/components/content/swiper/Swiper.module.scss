@@ -5,9 +5,13 @@
     // margin-right: 30px!important;
 }
 
-.swiper {
+.wrapper {
     position: relative;
 }
+
+// .swiper {
+
+// }
 
 .prev {
     width: 15px;
@@ -16,10 +20,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top: 1600px;
-    left: 300px;
+    top: 188px;
+    left: -35px;
 }
-
 
 .next {
     width: 15px;
@@ -28,7 +31,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top: 1600px;
-    right: 300px;
-
+    top: 188px;
+    right: -35px;
 }

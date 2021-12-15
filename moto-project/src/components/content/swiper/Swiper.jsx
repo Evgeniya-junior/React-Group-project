@@ -14,29 +14,29 @@ import AdviseProducts from '../advise-products/AdviseProducts';
 // eslint-disable-next-line
 export default () => {
     return (
-        <>
-            <Swiper className={s.swiper}
-            // install Swiper modules
-            modules={[Navigation]}
-            spaceBetween={30}
-            slidesPerView={4}
-            navigation={true}
-            loop={true}
-            loopFillGroupWithBlank={true}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}
-            >
-            <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
-            <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
-            <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
-            <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
-            <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
-            <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
-            <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
-            <SwiperSlide className={s.slide}><AdviseProducts /></SwiperSlide>
-            </Swiper>
-            <div className={s.prev}>Prev</div>
-            <div className={s.next}>Next</div>
-        </>
+            <div className={s.wrapper}>
+                <Swiper className={s.swiper}
+                // install Swiper modules
+                modules={[Navigation]}
+                spaceBetween={30}
+                slidesPerView={4}
+                navigation={true}
+                loop={true}
+                loopFillGroupWithBlank={true}
+                onSwiper={(swiper) => console.log(swiper)}
+                onSlideChange={() => console.log('slide change')}
+                >
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                </Swiper>
+                <div className={s.prev}></div>
+                <div className={s.next}></div>
+            </div>
     );
 };
