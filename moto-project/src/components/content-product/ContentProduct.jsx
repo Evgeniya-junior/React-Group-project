@@ -30,12 +30,16 @@ function ContentProduct(props) {
                     </Breadcrumbs>
                 </div>
                 <ProductCard/>
-                <div>Таб "(сделать)"</div>
+                    <br/>
+                    <div>Таб "(сделать)"</div>
+                    <br/>
                 <SearchShop/>
                 <AddressTable/>
             </main>
             <h2>С этим товаром покупают "(компонента??)"</h2> 
-            таб "(сделать)"
+            <br/>
+            <p>таб "(сделать)"</p>
+            <br/>
             <Advise/>
         </div>
     );
