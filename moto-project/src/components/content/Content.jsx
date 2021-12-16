@@ -59,7 +59,7 @@ function Content(props) {
       </section>
 
       <section className={s.popularProducts}>
-        <PopularProducts/>
+        <PopularProducts title='Популярные товары' text1='запчасти' text2='моторы' text3='шины' text4='электроника' text5='инструменты' text6='аксессуары' buttonText='Показать еще'/>
       </section>
 
       <section className={s.saleBaner}>

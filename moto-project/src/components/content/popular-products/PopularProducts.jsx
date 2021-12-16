@@ -4,20 +4,20 @@ import Swiper from './../swiper/Swiper';
 function PopularProducts(props) {
     return (
         <>
-            <h2 className={s.title}>Популярные товары</h2>
+            <h2 className={s.title}>{props.title}</h2>
 
             <ul className={s.list}>
-                <li className={s.item}>запчасти</li>
-                <li className={s.item}>моторы</li>
-                <li className={s.item}>шины </li>
-                <li className={s.item}>электроника</li>
-                <li className={s.item}>инструменты</li>
-                <li className={s.item}>аксессуары </li>
+                <li className={s.item}>{props.text1}</li>
+                <li className={s.item}>{props.text2}</li>
+                <li className={s.item}>{props.text3}</li>
+                <li className={s.item}>{props.text4}</li>
+                <li className={s.item}>{props.text5}</li>
+                <li className={s.item}>{props.text6}</li>
             </ul>
 
             <Swiper/>
 
-            <button className={s.button} type='button'>Показать еще</button>
+            <button className={s.button} type='button'>{props.buttonText}</button>
         </>
     );
 }

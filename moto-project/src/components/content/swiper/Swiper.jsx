@@ -1,7 +1,7 @@
-// Core modules imports are same as usual
-import { Navigation } from 'swiper';
 // Direct React component imports
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
+// Core modules imports are same as usual
+import { Navigation } from 'swiper';
 
 // Styles must use direct files imports
 import 'swiper/swiper.scss'; // core Swiper
@@ -30,14 +30,14 @@ export default () => {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
             >
-            <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
-            <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
-            <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
-            <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
-            <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
-            <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
-            <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
-            <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
+                <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
             </Swiper>
             <div className={`button-prev ${s.prev}`} ></div>
             <div className={`button-next ${s.next}`} ></div>
