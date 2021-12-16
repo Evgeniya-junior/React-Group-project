@@ -1,7 +1,16 @@
+@import './../../../sass/vars.scss';
+
 .specsTable {
         border-spacing: 0px;
         max-width: 436px;
         width: 100%;
         border-collapse: collapse;
-        
+}
+
+details summary  {
+        list-style: none;
+        font-size: 14px;
+        line-height: 2.5;
+        color: $accentColor;
+        text-decoration: underline;
 }

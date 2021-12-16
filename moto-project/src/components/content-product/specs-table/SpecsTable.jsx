@@ -29,6 +29,7 @@ const row5 = {
 
 function SpecsTable() {
     return (
+        <div>
         <table className={s.specsTable}>
             <tbody>
                 <RowTableSpecs 
@@ -51,9 +52,29 @@ function SpecsTable() {
                 characteristic={row5.characteristic}
                 value={row5.value}
                 />
-                <a href="#">Показать еще</a>
             </tbody>
         </table>
+
+        <details>
+                <summary>Показать еще</summary>
+                <table className={s.specsTable}>
+                    <tbody>
+                        <RowTableSpecs 
+                            characteristic={row1.characteristic}
+                            value={row1.value}
+                        />
+                        <RowTableSpecs 
+                            characteristic={row2.characteristic}
+                            value={row2.value}
+                        />
+                        <RowTableSpecs 
+                            characteristic={row3.characteristic}
+                            value={row3.value}
+                        />
+                    </tbody>
+                </table>
+            </details>
+        </div>
     );
 }
 
