@@ -11,11 +11,10 @@ import React from 'react';
 
 function AdviseProducts(props) {
     return (
-            <div className={s.productCard}>
+            <div className={s.adviseProducts}>
                 <span className={s.label}>SALE</span>
                 <img className={s.image} src={props.image} alt="" />
-
-                <h2 className={s.headline}>{props.title}</h2>
+                <h2 className={s.title}>{props.title}</h2>
                 <div className={s.wrapper}>
                     <span className={s.price}>{props.price} </span>
                     <button className={s.basketBtn}>

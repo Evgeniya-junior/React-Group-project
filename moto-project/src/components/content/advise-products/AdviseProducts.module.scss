@@ -1,12 +1,20 @@
-// .AdviseProducts {
-//     border: 1px solid grey;
-//     height: 403px;
-// }
+.adviseProducts {
+    border: 1px solid grey;
+    height: 403px;
+    position: relative;
+}
 
-.btn {
-    border: none;
-    background: transparent;
-    // background: url("../../../assets/images/cart.png") no-repeat;
-  }
+.label{
+    position: absolute;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    width: 63px;
+    height: 25px;
+    background: #1C62CD;
+    color: #FFFFFF;
+    padding: 5px 15px 9px;
+}
+
 
 

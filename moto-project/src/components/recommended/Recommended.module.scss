@@ -1,5 +1,28 @@
-.recomendList {
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+.recommendTitle{
+    font-family: 'Barlow Bold', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #2F3035;
+    margin: 0;
+    margin-bottom: 25px;
 }
+
+
+.recommendList {
+    max-width: 665px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 35px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #2F3035;
+}
+

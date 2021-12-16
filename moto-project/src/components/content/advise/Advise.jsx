@@ -4,7 +4,7 @@ import saleIcon from "./../../../assets/images/saleIcon.png";
 import echomap from "./../../../assets/images/echomap.png";
 import rfKey from "./../../../assets/images/rf-key.png";
 import hydroSuit from "./../../../assets/images/hydro-suit.png";
-import AdviseSection from "./../advise-section/AdviseSection";
+import AdviseSection from "./../advise-section/AdviseSection"
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 
 
