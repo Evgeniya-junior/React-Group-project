@@ -10,21 +10,21 @@
     // }
     // @media screen and (max-width:960px){
     //     grid-template-columns: repeat(3,1fr);
-    //     grid-template-rows: repeat(2,1fr);  
+    //     grid-template-rows: repeat(2,1fr);
     //     padding-left: 0;
     // }
 }
 .saleAll{
     transform: scaleX(-1);
     // @media screen and (max-width:960px){
-    //     grid-column: 3/4; 
-    //     grid-row: 2/3; 
+    //     grid-column: 3/4;
+    //     grid-row: 2/3;
     // }
 }
 // .saleMoto{
 //     @media screen and (max-width:960px){
-//         grid-column:1/2; 
-//         grid-row: 2/3; 
+//         grid-column:1/2;
+//         grid-row: 2/3;
 //         justify-content: space-around;
 //     }
 // }
@@ -45,8 +45,8 @@
     justify-content: center;
     align-items: center;
     // @media screen and (max-width:960px){
-    //     grid-column:1/4 ; 
-    //     grid-row: 1/2; 
+    //     grid-column:1/4 ;
+    //     grid-row: 1/2;
     // }
 }
 // .br{
@@ -71,4 +71,5 @@
     line-height: 50px;
     text-align:center;
     color: #2F3035;
+    cursor: pointer;
 }

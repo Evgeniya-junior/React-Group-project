@@ -6,8 +6,8 @@ import Form from './form/Form';
 function Search(props) {
     return (
         <div className={s.search}>
-            <Tabs/>
-            <Form/>
+            <Tabs text1='Поиск по  номеру' text2='Поиск по марке' text3='Поиск по названию товара'/>
+            <Form placeholder='Введите марку' text='Искать'/>
         </div>
     );
 }

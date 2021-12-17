@@ -28,8 +28,14 @@
 }
 
 .item {
+    height: 32px;
+    border: 2px solid $accentColor;
+    padding: 6px 0;
+    border: transparent;
+
     &:hover {
         cursor: pointer;
         border-bottom: 2px solid $accentColor;
+        transition: 0.2s;
     }
 }
