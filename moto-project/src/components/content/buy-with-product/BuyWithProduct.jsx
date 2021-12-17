@@ -1,7 +1,7 @@
-import s from './PopularProducts.module.scss';
-import Swiper from '../swiper/Swiper';
+import s from './BuyWithProduct.module.scss';
+import Swiper2 from '../swiper/Swiper2';
 
-function PopularProducts(props) {
+function BuyWithProduct(props) {
     return (
         <>
             <h2 className={s.title}>{props.title}</h2>
@@ -15,12 +15,10 @@ function PopularProducts(props) {
                 <li className={s.item}>{props.text6}</li>
             </ul>
 
-            <Swiper/>
-
-            <button className={s.button} type='button'>{props.buttonText}</button>
+            <Swiper2 className={s.swiper}/>
 
         </>
     );
 }
 
-export default PopularProducts;
+export default BuyWithProduct;

@@ -1,3 +1,5 @@
+@import './../../../../sass/vars';
+
 .form {
     position: relative;
     width: 100%;
@@ -12,7 +14,7 @@
     padding: 15px 0 15px 20px;
     border-radius: 3px;
     outline: none;
-    background-color: #F0F0F4;
+    background-color: $baseColor;
     font-family: 'SF Pro Display', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -29,7 +31,7 @@
     border: none;
     border-radius: 5px;
     outline: none;
-    background-color: #1C62CD;
+    background-color: $accentColor;
     cursor: pointer;
     font-family: 'SF Pro Display',sans-serif;
     font-weight: 700;

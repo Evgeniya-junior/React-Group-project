@@ -6,11 +6,12 @@ import boat from "./../../assets/images/boat.png";
 import snowMoto from "./../../assets/images/snow-moto.png";
 import allMoto from "./../../assets/images/all-moto.png";
 import engines from "./../../assets/images/engines.png";
-import Products from "./products/Products";
 import SliderBaner from "./slider-baner/SliderBaner";
-import SaleBaner from "./sale-baner/SaleBaner";
 import Search from './search/Search';
+import Products from "./products/Products";
 import PopularProducts from './popular-products/PopularProducts';
+import SaleBaner from "./sale-baner/SaleBaner";
+import BuyWithProduct from './buy-with-product/BuyWithProduct';
 
 
 function Content(props) {
@@ -65,8 +66,11 @@ function Content(props) {
       <section className={s.saleBaner}>
         <SaleBaner data={sectionData} data5={sectionData5}/>
       </section>
-    </div>
 
+      <section className={s.buyWithProduct}>
+        <BuyWithProduct className={s.buyWithProduct} title='С этим товаром покупают' text1='запчасти' text2='моторы' text3='шины' text4='электроника' text5='инструменты' text6='аксессуары'/>
+      </section>
+    </div>
 
   );
 }

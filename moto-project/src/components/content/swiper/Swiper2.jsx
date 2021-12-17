@@ -7,7 +7,7 @@ import { Navigation } from 'swiper';
 import 'swiper/swiper.scss'; // core Swiper
 import 'swiper/modules/navigation/navigation.scss'; // Navigation module
 
-import s from './Swiper.module.scss';
+import s from './Swiper2.module.scss';
 import AdviseProducts from '../advise-products/AdviseProducts';
 
 
@@ -22,8 +22,8 @@ export default () => {
             spaceBetween={30}
             slidesPerView={4}
                 navigation={{
-                prevEl: '.button-prev',
-                nextEl: '.button-next',
+                prevEl: '.button-prev2',
+                nextEl: '.button-next2',
             }}
             loop={true}
             loopFillGroupWithBlank={true}
@@ -39,8 +39,8 @@ export default () => {
                 <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
                 <SwiperSlide className={s.slide}><AdviseProducts/></SwiperSlide>
             </Swiper>
-            <div className={`button-prev ${s.prev}`} ></div>
-            <div className={`button-next ${s.next}`} ></div>
+            <div className={`button-prev2 ${s.prev}`} ></div>
+            <div className={`button-next2 ${s.next}`} ></div>
         </div>
     );
 };
