@@ -3,11 +3,12 @@ import AddressTable from "./address-table/AddressTable";
 import SearchShop from "./search-shop/SearchShop";
 import Advise from "../content/advise/Advise";
 import ProductCard from "./product-card/ProductCard";
-
+import BuyWithProduct from "./../content/buy-with-product/BuyWithProduct";
 //Breadcrumbs
 import { Breadcrumbs } from "@mui/material";
 import Link from '@mui/material/Link';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import BasicTabs from "./components/basicTabs/BasicTabs";
 
 function ContentProduct(props) {
     return (
@@ -30,17 +31,15 @@ function ContentProduct(props) {
                     </Breadcrumbs>
                 </div>
                 <ProductCard/>
-                    <br/>
-                    <div>Таб "(сделать)"</div>
-                    <br/>
-                <SearchShop/>
-                <AddressTable/>
+                
+                <BasicTabs/>
+                
+                
             </main>
-            <h2>С этим товаром покупают "(компонента??)"</h2> 
-            <br/>
-            <p>таб "(сделать)"</p>
-            <br/>
-            <Advise/>
+            <BuyWithProduct className={s.buyWithProduct} title='С этим товаром покупают' 
+                text1='запчасти' text2='моторы' text3='шины' text4='электроника' 
+                text5='инструменты' text6='аксессуары'
+            />
         </div>
     );
 }
