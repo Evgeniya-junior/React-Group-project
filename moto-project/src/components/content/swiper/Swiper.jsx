@@ -8,7 +8,7 @@ import 'swiper/swiper.scss'; // core Swiper
 import 'swiper/modules/navigation/navigation.scss'; // Navigation module
 
 import s from './Swiper.module.scss';
-import AdviseProducts from '../advise-products/AdviseProducts';
+import AdviseProducts from './../advise-products/AdviseProducts';
 
 
 // eslint-disable-next-line
