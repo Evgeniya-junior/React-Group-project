@@ -8,9 +8,9 @@ import Rating from '@mui/material/Rating';
 import { styled } from '@mui/material/styles';
 import StarIcon from '@mui/icons-material/Star';
 import CheckboxFavorite from './../components/checkbox-favorite/CheckboxFavorite';
-import SpecsTable from '../specs-table/SpecsTable';
+import CardTabs from './card-tabs/CardTabs';
 
-
+// STYLED RATING 
 const StyledRating = styled(Rating)({
     '& .MuiRating-iconFilled': {
         color: '#1C62CD',
@@ -55,8 +55,8 @@ function ProductCard(props) {
                 </div>
             </div>
             <div className={s.specs}>
-            Характеристики            Наличие в магазине
-            <SpecsTable/>
+            <CardTabs/>
+            
             </div>
             <div className={s.cardButton}>
                 <Button title="Купить"/>

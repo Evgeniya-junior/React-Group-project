@@ -1,14 +1,11 @@
 import s from "./ContentProduct.module.scss";
-import AddressTable from "./address-table/AddressTable";
-import SearchShop from "./search-shop/SearchShop";
-import Advise from "../content/advise/Advise";
 import ProductCard from "./product-card/ProductCard";
 import BuyWithProduct from "./../content/buy-with-product/BuyWithProduct";
-//Breadcrumbs
+
 import { Breadcrumbs } from "@mui/material";
 import Link from '@mui/material/Link';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import BasicTabs from "./components/basicTabs/BasicTabs";
+import ProductTabs from "./product-tabs/ProductTabs";
 
 function ContentProduct(props) {
     return (
@@ -32,7 +29,7 @@ function ContentProduct(props) {
                 </div>
                 <ProductCard/>
                 
-                <BasicTabs/>
+                <ProductTabs/>
                 
                 
             </main>
