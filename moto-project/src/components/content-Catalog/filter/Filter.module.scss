@@ -1,3 +1,36 @@
 .filter{
     width: 304px;
+    font-family: 'SFProDisplayRegular';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#panel1a-header{
+    padding: 0 !important;
+}
+.btn{
+    width: 85%;
+    height: 50px;
+    background: #F0F0F4;
+    font-family: 'SFProDisplayRegular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.12em;
+    color: #BDBEC2;
+    margin:40px 15px 15px
+}
+
+.droppingLink{
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'SFProDisplayRegular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    text-decoration-line: underline;
+    color: #C4C4C4;
 }
