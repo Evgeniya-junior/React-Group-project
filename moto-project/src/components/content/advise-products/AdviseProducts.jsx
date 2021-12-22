@@ -17,9 +17,13 @@ function AdviseProducts(props) {
                 <h2 className={s.title}>{props.title}</h2>
                 <div className={s.wrapper}>
                     <span className={s.price}>{props.price} </span>
-                    <button className={s.basketBtn}>
+                    {props.inStock ? <button className={s.basketBtn} style={{width: '60px', height: '40px'}}>
                         <img src="" alt="" className={s.basketIcon} />
                     </button>
+                    : <div/>}
+                    {/*<button className={s.basketBtn}>*/}
+                    {/*    <img src="" alt="" className={s.basketIcon} />*/}
+                    {/*</button>*/}
                 </div>
                 <NavLink className={s.link} to={"/"}>Сообщить о поступлении</NavLink>
             </div>
