@@ -12,7 +12,7 @@ import React from 'react';
 function AdviseProducts(props) {
     return (
             <div className={s.adviseProducts}>
-                <span className={s.label}>SALE</span>
+                <span className={s.label}>{props.span}</span>
                 <img className={s.image} src={props.image} alt="" />
                 <h2 className={s.title}>{props.title}</h2>
                 <div className={s.wrapper}>
