@@ -85,10 +85,11 @@ function Filter(props) {
     
 return (
     <div className={s.filter}>
-        
-        {/* Аккардеон Наличие */}
+        <h2>Параметры</h2>
+        <div className={s.parameters}>
+             {/* Аккардеон Наличие */}
         <Accordion>
-            <AccordionSummary  expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
                 <Typography>Наличие</Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -191,8 +192,9 @@ return (
                 <Link href="#">Показать ещё</Link>
             </AccordionDetails>
         </Accordion>
+        </div>     
         {/* нихняя кнопка */}
-        <Button variant="contained" disabled>Выбрать</Button>
+        <Button className={s.btn} variant="contained" disabled>Выбрать</Button>
         {/* Дополнительные параметры */}
         <Accordion>
         <AccordionSummary
@@ -210,7 +212,7 @@ return (
         </AccordionDetails>
         </Accordion>
         {/* сбросить фильтр */}
-        <Link disabled>Сбросить фильтр</Link>
+        <Link className={s.droppingLink} disabled>Сбросить фильтр</Link>
     </div>      
     );
 }

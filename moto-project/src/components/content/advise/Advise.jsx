@@ -26,14 +26,14 @@ function Advise(props) {
         image: echomap,
         title: "Garmin Echomap Plus 62cv",
         price: "45 800 ₽",
-        inStock: false,
+        inStock: true,
         sale: false
     }
 
     const sectionData3 = {
         image: rfKey,
         title: "RF D.E.S.S.TM Key",
-        inStock: true,
+        inStock: false,
         sale: true
     }
 
@@ -41,14 +41,16 @@ function Advise(props) {
         image: hydroSuit,
         title: "Мужской костюм 3мм",
         price: "7 000 ₽",
+        inStock: false,
+        sale: true
     }
 
 
     return (
         <div className={s.advise}>
             <section>
-                <AdviseSection data={sectionData} data2={sectionData2} data3={sectionData3} data4={sectionData4} />
                 <FavoriteBorder  {...icon}/>
+                <AdviseSection data={sectionData} data2={sectionData2} data3={sectionData3} data4={sectionData4} />
             </section>
 
         </div>
