@@ -1,0 +1,30 @@
+.navCatalog{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn{
+    background: #f0f0f4;
+    padding: 4px 23px;
+    margin-right:8px;
+    border: none;
+    border-radius: 3px;
+    font-family: 'SFProDisplayRegular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2F3035;
+    opacity: 0.7;
+    &:hover{
+        opacity: 1;
+    }
+}
+.rigth{
+    display: flex;
+    justify-content: space-between;
+   
+}
+#demo-simple-select-autowidth-label{
+    padding: 0 ;
+}

@@ -1,61 +1,57 @@
 import * as React from 'react';
+import s from './Range.module.scss';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import MuiInput from '@mui/material/Input';
-
+import Input from '@mui/material/Input';
 
 function valuetext(value) {
   return `${value}`;
 }
 
-export default function Range() {
-  const [value, setValue] = React.useState([20, 40]);
+const minDistance = 10;
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+export default function MinimumDistanceSlider() {
+  const [value1, setValue1] = React.useState([20, 37]);
 
-  const handleInputChange = (event) => {
-    setValue(event.target.value === '' ? '' : Number(event.target.value));
-  };
+  const handleChange1 = (event, newValue, activeThumb) => {
+    if (!Array.isArray(newValue)) {
+      return;
+    }
 
-  const handleBlur = () => {
-    if (value < 0) {
-      setValue(0);
-    } else if (value > 100) {
-      setValue(100);
+    if (activeThumb === 0) {
+      setValue1([Math.min(newValue[0], value1[1] - minDistance), value1[1]]);
+    } else {
+      setValue1([value1[0], Math.max(newValue[1], value1[0] + minDistance)]);
     }
   };
 
+ 
+
   return (
     <Box sx={{ width: 270 }}>
-      <Grid item>
-        <Slider
-        getAriaLabel={() => 'Temperature range'}
-        value={value}
-        onChange={handleChange}
+      <Slider
+        getAriaLabel={() => 'Minimum distance'}
+        value={value1}
+        onChange={handleChange1}
         valueLabelDisplay="auto"
         getAriaValueText={valuetext}
+        disableSwap
       />
-     </Grid>  
-      
-     <Grid item>
-          <MuiInput
-            value={value}
-            size="small"
-            onChange={handleInputChange}
-            onBlur={handleBlur}
-            inputProps={{
-              step: 1000,
-              min: 0,
-              max: 2000000,
-              type: 'number',
-              'aria-labelledby': 'input-slider',
-            }}
-          />
-        </Grid>
-    </Box>
+      <div className={s.conclusion}>
+        <div className={s.minInput}>
+            <span className={s.minSpan}>от</span>
+            <Input style={{width:'55px'}}/>
+        </div>
+        <div className={s.maxInput}>
+          <span className={s.maxSpan}>до</span>
+          <Input style={{width:'55px'}}/>
+        </div>
+      </div>
+  </Box>
+    
+
   );
 }

@@ -5,11 +5,12 @@ import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import Link from '@mui/material/Link';
+import { Accordion, Button } from '@mui/material';
+import NavCatalog from './nav-Catalog/NavCatalog';
 
 function ContentCatalog(props) {
 return (
     <div className={s.content}>
-        <div className={s.container}>
             <div className={s.breadcrumbs}>
                 <Breadcrumbs aria-label="breadcrumb" 
                              separator={<NavigateNextIcon fontSize="small" />} 
@@ -18,11 +19,10 @@ return (
                 <Link underline="hover" color="inherit" href="/jetskis/">Гидроциклы</Link>
                 </Breadcrumbs>
             </div>
-            <h1 className={s.title}>Гидроциклы</h1>
-            <div className={s.nav}>Navigation</div>
+            <h2 className={s.title}>Гидроциклы</h2>
+            <NavCatalog/>
             <Filter/> 
-        </div>           
-    </div>      
+        </div>              
     );
 }
 

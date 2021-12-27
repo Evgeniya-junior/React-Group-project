@@ -1,6 +1,8 @@
 import s from "./Filter.module.scss";
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -19,6 +21,13 @@ import Selects from "../selects/Selects";
 import Range from "./range/Range";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+
+
+function valuetext(value) {
+    return `${value}$`;
+  }
+  const minDistance = 10;
 
 function Filter(props) {
     const Accordion = styled((props) => (
@@ -40,23 +49,24 @@ function Filter(props) {
       ))(({ theme }) => ({
         
         flexDirection: 'row-reverse',
+        padding:'0',
         
         '& .MuiAccordionSummary-content': {
-          marginLeft: theme.spacing(1),
+            marginLeft: theme.spacing(1),
           
         },
         '& .MuiTypography-root':{
             fontFamily: 'SF Pro Display',
-          fontStyle: "normal",
-          fontWight: '600',
-          fontSize: '16px' ,
-          color: '#2F3035',
+            fontStyle: "normal",
+            fontWight: '600',
+            fontSize: '16px' ,
+            color: '#2F3035',
         },
         '& .css-29zqm4-MuiButtonBase-root .MuiAccordionSummary-root':{
             padding:'0',
         }
-      }));
-      
+}));
+
       const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
         padding: theme.spacing(2),
         '& .MuiFormGroup-root':{
@@ -75,17 +85,60 @@ function Filter(props) {
         '& .MuiButtonBase-root:first-child':{
             marginLeft: '0px'
         },
-      }));
+}));
     
     const [expanded, setExpanded] = React.useState('panel1');
 
     const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
     }
+
+   
+      const [value1, setValue1] = React.useState([20, 37]);
+
+      const handleChange1 = (event, newValue, activeThumb) => {
+        if (!Array.isArray(newValue)) {
+          return;
+        }
     
+        if (activeThumb === 0) {
+          setValue1([Math.min(newValue[0], value1[1] - minDistance), value1[1]]);
+        } else {
+          setValue1([value1[0], Math.max(newValue[1], value1[0] + minDistance)]);
+        }
+      };
+    
+        const [value2, setValue2] = React.useState([20, 37]);
+        // tabs constants
+        const [value, setValue] = React.useState(2);
+        const handleChangeTabs = (event, newValue) => {
+        setValue(newValue);
+        };
+        const AntTab=styled(Tab)({
+            padding:'7px',
+            fontFamily: 'SFProDisplayBold',
+            fontSize: '16px',
+            color: '#2F3035',
+            '&.MuiButtonBase-root.MuiTab-root':{
+                justifyContent: 'flex-end'},
+            '&.MuiButtonBase-root.MuiTab-root.Mui-selected':{
+                color: '#2F3035',
+                justifyContent: 'flex-end'}
+        });
+        // constants button
+        const ArtButton=styled(Button)({
+            marginTop:'40px'
+        })
+
 return (
     <div className={s.filter}>
-        <h2>Параметры</h2>
+        <div className={s.tabs}>
+            <Tabs value={value} onChange={handleChangeTabs} aria-label="disabled tabs example">
+                <AntTab label="ПАРАМЕТРЫ" />
+                <AntTab label="ПО МАРКЕ" disabled />
+            </Tabs>
+        </div>
+        
         <div className={s.parameters}>
              {/* Аккардеон Наличие */}
         <Accordion>
@@ -111,7 +164,7 @@ return (
                     <FormControlLabel control={<Checkbox />} label="Новинки" />
                     <FormControlLabel control={<Checkbox />} label="Акции" />
                 </FormGroup>
-                <Link href="#">Показать ещё</Link>
+                <Link className={s.link} href="#">Показать ещё</Link>
             </AccordionDetails>
         </Accordion>
 
@@ -194,22 +247,21 @@ return (
         </Accordion>
         </div>     
         {/* нихняя кнопка */}
-        <Button className={s.btn} variant="contained" disabled>Выбрать</Button>
+        <ArtButton className={s.btn} variant="contained" disabled>Выбрать</ArtButton>
         {/* Дополнительные параметры */}
         <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>Дополнительные параметры</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
+            <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel2a-content"
+                id="panel2a-header">
+                <Typography>Дополнительные параметры</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+                <Typography>
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                 malesuada lacus ex, sit amet blandit leo lobortis eget.
+                </Typography>
+            </AccordionDetails>
         </Accordion>
         {/* сбросить фильтр */}
         <Link className={s.droppingLink} disabled>Сбросить фильтр</Link>
