@@ -6,7 +6,6 @@ import { BrowserRouter } from "react-router-dom";
 import Content from "./components/content/Content";
 import Advise from "./components/content/advise/Advise";
 import Header from "./components/header/Header";
-import Recommended from "./components/recommended/Recommended";
 import ContentCatalog from "./components/content-Catalog/ContentCatalog";
 import ContentProduct from "./components/content-product/ContentProduct";
 
@@ -19,7 +18,6 @@ function App() {
           <Content />
           <ContentCatalog />
           <ContentProduct />
-          <Recommended />
           <Advise />
         </div>
       </div>

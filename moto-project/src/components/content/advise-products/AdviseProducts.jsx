@@ -12,8 +12,11 @@ import React from 'react';
 function AdviseProducts(props) {
     return (
             <div className={s.adviseProducts}>
-                <span className={s.label}>{props.span}</span>
+                <span className={s.label}>SALE</span>
+                <div className={s.imageWrapper}>
                 <img className={s.image} src={props.image} alt="" />
+                </div>
+                <div className={s.infoWrapper}>
                 <h2 className={s.title}>{props.title}</h2>
                 <div className={s.wrapper}>
                     <span className={s.price}>{props.price} </span>
@@ -21,11 +24,12 @@ function AdviseProducts(props) {
                         <img src="" alt="" className={s.basketIcon} />
                     </button>
                     : <div/>}
-                    {/*<button className={s.basketBtn}>*/}
-                    {/*    <img src="" alt="" className={s.basketIcon} />*/}
-                    {/*</button>*/}
+                    {/* <button className={s.basketBtn}>
+                       <img src="" alt="" className={s.basketIcon} />
+                    </button> */}
                 </div>
                 <NavLink className={s.link} to={"/"}>Сообщить о поступлении</NavLink>
+                </div>
             </div>
     );
 }

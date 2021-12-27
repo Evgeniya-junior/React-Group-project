@@ -16,6 +16,25 @@
     padding: 5px 15px 9px;
 }
 
+.imageWrapper {
+    min-height: 260px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoWrapper {
+    height:  140px;
+}
+
+.title {
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2F3035;
+}
 
 .basketBtn {
     background: url(../../../assets/images/cart.png);
