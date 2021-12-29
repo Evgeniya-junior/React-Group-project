@@ -1,0 +1,17 @@
+@import './../../../sass/vars.scss';
+
+
+.spanSale{
+    width: 90px;
+    height: 30px;
+    background: $accentColor;
+    text-align: center;
+}
+.text{
+    font-family: 'ProximaNovaBold';
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}

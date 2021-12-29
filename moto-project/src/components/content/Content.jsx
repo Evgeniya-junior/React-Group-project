@@ -12,7 +12,8 @@ import Products from "./products/Products";
 import PopularProducts from './popular-products/PopularProducts';
 import SaleBaner from "./sale-baner/SaleBaner";
 import BuyWithProduct from './buy-with-product/BuyWithProduct';
-
+import SaleCard from "./saleCard/SaleCard";
+import engine from './../../assets/images/engine.png';
 
 function Content(props) {
   const sectionData={
@@ -47,8 +48,9 @@ function Content(props) {
   }
   return (
     <div className={s.content}>
-      <section className={s.sliderBaner}>
-        <SliderBaner/>
+      <section className={s.baner}>
+        <SliderBaner />
+        <SaleCard img={engine} title="Лодочный мотор Suzuki DF9.9BRS" date="31.08.2020"/>
       </section>
 
       <section className={s.search}>
