@@ -25,7 +25,7 @@ function AdviseProducts(props) {
                     </button>
                     : <div/>}
                     {/* <button className={s.basketBtn}>
-                       <img src="" alt="" className={s.basketIcon} />
+                    <img src="" alt="" className={s.basketIcon} />
                     </button> */}
                 </div>
                 <NavLink className={s.link} to={"/"}>Сообщить о поступлении</NavLink>
