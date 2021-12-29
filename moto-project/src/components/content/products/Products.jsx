@@ -1,4 +1,5 @@
 import s from "./Products.module.scss";
+import React from "react";
 import ProductSection from "./../product-section/ProductSection";
 
 

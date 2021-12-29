@@ -2,4 +2,11 @@ $primaryColor: #2F3035;
 
 $accentColor: #1C62CD;
 
-$baseColor: #F0F0F4
+$baseColor: #F0F0F4;
+// Breakpoints
+$breakpoints:(
+    lg:1200px,
+    md:992px,
+    sm:768px,
+    xs:320px
+);
