@@ -9,7 +9,10 @@ function ProductSection(props) {
         <h1 className={s.title}>{props.title}</h1>
         <NavLink className={s.link} to={props.link}>Подробнее</NavLink>
       </div>
-      <img className={s.img} src={props.img} alt="Picture of the mode of transport" />
+      <div className={s.imgWrap}>
+        <img className={s.img} src={props.img} alt="Picture of the mode of transport" />
+      </div>
+      
     </articl>
   );
 }

@@ -17,10 +17,14 @@
     @include media(md){
         margin:auto;
     }
+    @include media(xs){
+        min-width: 235px;
+    }
 }
 .wrapper{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items:flex-start;
 }
 .title{
@@ -37,7 +41,19 @@
         height: 9px;
         background-image: url("./../../../assets/images/arrow-rigth.png");
         position: absolute;
-        top: 13px;
+        top: 10px;
         right: -10px;
     }
+}
+.imgWrap{
+    @include media(xs){
+        display: flex;
+        align-items: center;
+    }
+}
+.img{
+    width: 100%;
+    // @include media(xs){
+    //     width: 90px;
+    // }
 }

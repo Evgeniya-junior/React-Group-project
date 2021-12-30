@@ -1,11 +1,15 @@
+@import './../../sass/mixins.scss';
+
 .baner{
     margin-bottom: 80px;
     display: flex;
     justify-content: space-between;
+    @include media (sm){
+        flex-direction: column;
+        align-items:center;
+    }
 }
-// .sliderBaner{
-//     width: 70%;
-// }
+
 .products{
     margin-bottom: 80px;
 }

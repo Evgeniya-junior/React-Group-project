@@ -50,7 +50,7 @@ function Content(props) {
     <div className={s.content}>
       <section className={s.baner}>
         <SliderBaner />
-        <SaleCard img={engine} title="Лодочный мотор Suzuki DF9.9BRS" date="31.08.2020"/>
+        <SaleCard className={s.saleCard} img={engine} title="Лодочный мотор Suzuki DF9.9BRS" date="31.08.2020"/>
       </section>
 
       <section className={s.search}>

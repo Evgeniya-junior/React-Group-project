@@ -1,11 +1,16 @@
 @import './../../../sass/vars.scss';
+@import './../../../sass/mixins.scss';
 
 .saleCard{
-    max-width: 264px;
+    width: 264px;
     max-height: 397px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include media (sm){
+        margin-top: 43px;
+        height: 397px;
+    }
 }
 .head{
     display: flex;
@@ -36,6 +41,7 @@
 }
 .img{
     padding: 0 62px;
+    width: 100%;
 }
 .text{
     font-family: 'SFProDisplayRegular';
