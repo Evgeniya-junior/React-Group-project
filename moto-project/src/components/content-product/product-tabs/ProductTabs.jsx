@@ -37,7 +37,9 @@ const Tab = styled(TabUnstyled)`
 
     &.Mui-selected {
         color: #2F3035;
-        // font-weight: bold;
+        @media screen and (max-width: 992px) {
+            font-weight: bold;
+        } 
     }
 
     &:hover {
@@ -54,6 +56,9 @@ const Tab = styled(TabUnstyled)`
 
     &.${tabUnstyledClasses.selected} {
         border-bottom: 2px solid #1C62CD;
+        @media screen and (max-width: 992px) {
+            border-bottom: 0;
+        } 
     }
 
     &.${buttonUnstyledClasses.disabled} {
@@ -71,6 +76,10 @@ const TabsList = styled(TabsListUnstyled)`
     background-color: transparent;
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 992px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 `;
 
 export default function ProductTabs() {
