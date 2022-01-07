@@ -8,12 +8,14 @@ import Link from '@mui/material/Link';
 import { Accordion, Button } from '@mui/material';
 import NavCatalog from './nav-Catalog/NavCatalog';
 
+import Pagination from '@mui/material/Pagination';
+
 function ContentCatalog(props) {
 return (
     <div className={s.content}>
             <div className={s.breadcrumbs}>
-                <Breadcrumbs aria-label="breadcrumb" 
-                             separator={<NavigateNextIcon fontSize="small" />} 
+                <Breadcrumbs aria-label="breadcrumb"
+                             separator={<NavigateNextIcon fontSize="small" />}
                              aria-label="breadcrumb">
                 <Link underline="hover" color="inherit" href="/">Главная</Link>
                 <Link underline="hover" color="inherit" href="/jetskis/">Гидроциклы</Link>
@@ -21,8 +23,9 @@ return (
             </div>
             <h2 className={s.title}>Гидроциклы</h2>
             <NavCatalog/>
-            <Filter/> 
-        </div>              
+        <Filter />
+        <Pagination count={11} variant="outlined" shape="rounded" />
+        </div>
     );
 }
 
