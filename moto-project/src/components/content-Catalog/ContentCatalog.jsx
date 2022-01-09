@@ -23,7 +23,7 @@ return (
             <h2 className={s.title}>Гидроциклы</h2>
             <NavCatalog/>
         <Filter />
-        <Pagination count={11} variant="outlined" shape="rounded" />
+        <Pagination count={11} variant="outlined" shape="rounded" color='primary' />
         </div>
     );
 }
