@@ -7,7 +7,6 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import Link from '@mui/material/Link';
 import { Accordion, Button } from '@mui/material';
 import NavCatalog from './nav-Catalog/NavCatalog';
-
 import Pagination from '@mui/material/Pagination';
 
 function ContentCatalog(props) {
