@@ -7,7 +7,6 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import Link from '@mui/material/Link';
 import { Accordion, Button } from '@mui/material';
 import NavCatalog from './nav-Catalog/NavCatalog';
-
 import Pagination from '@mui/material/Pagination';
 
 function ContentCatalog(props) {
@@ -24,7 +23,7 @@ return (
             <h2 className={s.title}>Гидроциклы</h2>
             <NavCatalog/>
         <Filter />
-        <Pagination count={11} variant="outlined" shape="rounded" />
+        <Pagination count={11} variant="outlined" shape="rounded" color='primary' />
         </div>
     );
 }
