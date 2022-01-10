@@ -1,6 +1,8 @@
 import * as React from 'react';
 import SpecsTable from '../../specs-table/SpecsTable';
 
+
+
 import s from './CardTabs.module.scss';
 import { styled } from '@mui/system';
 import TabsUnstyled from '@mui/base/TabsUnstyled';
@@ -74,7 +76,7 @@ const TabsList = styled(TabsListUnstyled)`
     margin-bottom: 20px;
 `;
 
-export default function CardTabs() {
+export default function CardTabs(props) {
     return (
         <TabsUnstyled defaultValue={0}>
             <div className={s.tabListWrapper}>
@@ -84,7 +86,7 @@ export default function CardTabs() {
                 </TabsList>
             </div>
             <TabPanel value={0}>
-                <SpecsTable/>
+                <SpecsTable characteristicData={props.characteristicData} />
             </TabPanel>
             <TabPanel value={1}>
                         Наличие в магазине

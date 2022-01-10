@@ -1,56 +1,32 @@
 import s from "./SpecsTable.module.scss";
 import RowTableSpecs from "./row-table-specs/RowTableSpecs";
 
-const row1 = {
-    characteristic: "Производитель",
-    value: "Канада",
-}
-
-const row2 = {
-    characteristic: "Количество мест, шт:",
-    value: "3",
-}
-
-const row3 = {
-    characteristic: "Мощность, л.с.",
-    value: "155",
-}
-
-const row4 = {
-    characteristic: "Тип двигателя",
-    value: "Бензиновый",
-}
-
-const row5 = {
-    characteristic: "Год выпуска",
-    value: "2018",
-}
 
 
-function SpecsTable() {
+function SpecsTable(props) {
     return (
         <div>
         <table className={s.specsTable}>
             <tbody>
                 <RowTableSpecs 
-                characteristic={row1.characteristic}
-                value={row1.value}
+                    td1={props.characteristicData[0][0]}
+                    td2={props.characteristicData[0][1]}
                 />
                 <RowTableSpecs 
-                characteristic={row2.characteristic}
-                value={row2.value}
+                    td1={props.characteristicData[1][0]}
+                    td2={props.characteristicData[1][1]}
                 />
                 <RowTableSpecs 
-                characteristic={row3.characteristic}
-                value={row3.value}
+                    td1={props.characteristicData[2][0]}
+                    td2={props.characteristicData[2][1]}
                 />
                 <RowTableSpecs 
-                characteristic={row4.characteristic}
-                value={row4.value}
+                    td1={props.characteristicData[3][0]}
+                    td2={props.characteristicData[3][1]}
                 />
                 <RowTableSpecs 
-                characteristic={row5.characteristic}
-                value={row5.value}
+                    td1={props.characteristicData[4][0]}
+                    td2={props.characteristicData[4][1]}
                 />
             </tbody>
         </table>
@@ -60,16 +36,24 @@ function SpecsTable() {
                 <table className={s.specsTable}>
                     <tbody>
                         <RowTableSpecs 
-                            characteristic={row1.characteristic}
-                            value={row1.value}
+                            td1={props.characteristicData[5][0]}
+                            td2={props.characteristicData[5][1]}
                         />
                         <RowTableSpecs 
-                            characteristic={row2.characteristic}
-                            value={row2.value}
+                            td1={props.characteristicData[6][0]}
+                            td2={props.characteristicData[6][1]}
                         />
                         <RowTableSpecs 
-                            characteristic={row3.characteristic}
-                            value={row3.value}
+                            td1={props.characteristicData[7][0]}
+                            td2={props.characteristicData[7][1]}
+                        />
+                        <RowTableSpecs 
+                            td1={props.characteristicData[8][0]}
+                            td2={props.characteristicData[8][1]}
+                        />
+                        <RowTableSpecs 
+                            td1={props.characteristicData[9][0]}
+                            td2={props.characteristicData[9][1]}
                         />
                     </tbody>
                 </table>

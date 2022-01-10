@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 function ProductSection(props) {
   return (
-    <articl className={s.productSection}>
+    <article className={s.productSection}>
       <div className={s.wrapper}>
         <h1 className={s.title}>{props.title}</h1>
         <NavLink className={s.link} to={props.link}>Подробнее</NavLink>
@@ -13,7 +13,7 @@ function ProductSection(props) {
         <img className={s.img} src={props.img} alt="Picture of the mode of transport" />
       </div>
       
-    </articl>
+    </article>
   );
 }
 
