@@ -1,8 +1,6 @@
 import * as React from 'react';
 import SpecsTable from '../../specs-table/SpecsTable';
 
-
-
 import s from './CardTabs.module.scss';
 import { styled } from '@mui/system';
 import TabsUnstyled from '@mui/base/TabsUnstyled';

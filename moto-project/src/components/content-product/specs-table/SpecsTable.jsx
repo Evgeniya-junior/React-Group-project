@@ -1,8 +1,6 @@
 import s from "./SpecsTable.module.scss";
 import RowTableSpecs from "./row-table-specs/RowTableSpecs";
 
-
-
 function SpecsTable(props) {
     return (
         <div>

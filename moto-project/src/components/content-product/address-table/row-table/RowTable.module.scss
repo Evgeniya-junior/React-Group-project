@@ -1,17 +1,53 @@
+@import './../../../../sass/mixins';
+@import './../../../../sass/vars';
+
 .rowTable {
+    display: grid;
+    grid-template-columns: 26% 22% 18% 11% 1fr;
+    min-width: 89px;
     border-bottom: 1px solid #C4C4C4;
-    height: 89px;
-}
+    padding: 20px 0;
+    @include media (md) {
+        grid-template-columns: 300px;
+        grid-template-rows: 40px 84px 38px 38px 50px;
+    }
 
+    &__cell {
+        justify-content: flex-start;
+        align-items: center;
+        @include media (md) {
+            &:not(:nth-child(2)) {
+                display: inline-flex;
+            justify-content: space-between;
+            }
+        }
+        &:not(:last-child) {
+            padding-right: 10px;
+        }
+        &:last-child {
+            justify-self: self-end;
+            @include media (md) {
+                justify-self: start;
+            }
+        }
+        &:nth-child(2) div {
+            width: 155px;
+            display: flex;
+            justify-content: space-between;
+    
+            &:first-child {
+                margin-bottom: 9px;
+            }
+        }
+    }
 
-
-
-.workingHours div {
-    width: 155px;
-    display: flex;
-    justify-content: space-between;
-
-    &:first-child {
-        margin-bottom: 10px;
+    &__none {
+        font-weight: 500;
+        display: none;
+        @include media (md) {
+            display: inline;
+        }
     }
 }
+
+

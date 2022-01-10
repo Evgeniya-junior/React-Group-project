@@ -32,28 +32,23 @@ const row4 = {
 
 function AddressTable(props) {
     return (
-        <table className={s.addressTable}>
-            <thead>
-                <tr>
-                    <th>Адрес</th>
-                    <th>Режим работы</th>
-                    <th>Доступно</th>
-                    <th>Количество</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <RowTable address={row1.address} weekday={row1.weekday} weekends={row1.weekends}
-                    availability={row1.availability} number={row1.number}/>
-                <RowTable address={row2.address} weekday={row2.weekday} weekends={row2.weekends}
-                    availability={row2.availability} number={row2.number}/>
-                <RowTable address={row3.address} weekday={row3.weekday} weekends={row3.weekends}
-                    availability={row3.availability} number={row3.number}/>
-                <RowTable address={row4.address} weekday={row4.weekday} weekends={row4.weekends}
-                    availability={row4.availability} number={row4.number}/>
-            </tbody>
-        </table>
+        <div className="AddressTable__body">
+            <div class={s.rowTable__header}>
+                <div>Адрес</div>
+                <div>Режим работы</div>
+                <div>Доступно</div>
+                <div>Количество</div>
+                <div></div>
+            </div>
+            <RowTable address={row1.address} weekday={row1.weekday} weekends={row1.weekends}
+                availability={row1.availability} number={row1.number}/>
+            <RowTable address={row2.address} weekday={row2.weekday} weekends={row2.weekends}
+                availability={row2.availability} number={row2.number}/>
+            <RowTable address={row3.address} weekday={row3.weekday} weekends={row3.weekends}
+                availability={row3.availability} number={row3.number}/>
+            <RowTable address={row4.address} weekday={row4.weekday} weekends={row4.weekends}
+                availability={row4.availability} number={row4.number}/>
+        </div>
     );
 }
-
 export default AddressTable;

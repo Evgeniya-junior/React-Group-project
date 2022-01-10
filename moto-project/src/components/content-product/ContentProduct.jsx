@@ -32,9 +32,8 @@ const characteristicData = [
 
 function ContentProduct(props) {
     return (
-        <div className={s.contentProduct}>
+        <main className={s.contentProduct}>
             <h2>3-я страница</h2>
-            <main>
                 <div className={s.contentBreadcrumb}>
                     <Breadcrumbs 
                         aria-label="breadcrumb" 
@@ -52,14 +51,11 @@ function ContentProduct(props) {
                 </div>
                 <ProductCard productData={productData} characteristicData={characteristicData}/>
                 <ProductTabs/>
-                
-                
-            </main>
             <BuyWithProduct className={s.buyWithProduct} title='С этим товаром покупают' 
                 text1='запчасти' text2='моторы' text3='шины' text4='электроника' 
                 text5='инструменты' text6='аксессуары'
             />
-        </div>
+        </main>
     );
 }
 

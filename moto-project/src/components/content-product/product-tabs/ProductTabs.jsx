@@ -106,8 +106,10 @@ export default function ProductTabs() {
                 Отзывы
             </TabPanel>
             <TabPanel value={3}>
-                <SearchShop/>
-                <AddressTable/>
+                <div className={s.ProductTabs__shop}>
+                    <SearchShop/>
+                    <AddressTable/>
+                </div>
             </TabPanel>
             <TabPanel value={4}>
                 Доставка

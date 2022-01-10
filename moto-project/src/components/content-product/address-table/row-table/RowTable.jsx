@@ -1,12 +1,15 @@
 import Button from "../../components/button/Button";
 import s from "./RowTable.module.scss";
 
-
 function RowTable(props) {
     return (
-            <tr className={s.rowTable}>
-                <td>{props.address}</td>
-                <td className={s.workingHours}>
+            <div className={s.rowTable}>
+                <div className={s.rowTable__cell}>
+                    <span className={s.rowTable__none}>Адрес</span>
+                    <span>{props.address}</span>
+                </div>
+                <div className={s.rowTable__cell}>
+                    <span className={s.rowTable__none}>Режим работы</span>
                     <div>
                         <span>пн-сб:</span>
                         <span>{props.weekday}</span>
@@ -15,12 +18,19 @@ function RowTable(props) {
                         <span>вс:</span>
                         <span>{props.weekends}</span>
                     </div>
-                </td>
-                <td>{props.availability}</td>
-                <td>{props.number}</td>
-                <td><Button title="Купить"/></td>
-            </tr>
+                </div>
+                <div className={s.rowTable__cell}>
+                    <span className={s.rowTable__none}>Доступно</span>
+                    {props.availability}
+                </div>
+                <div className={s.rowTable__cell}>
+                    <span className={s.rowTable__none}>Количество</span>
+                    {props.number}
+                </div>
+                <div className={s.rowTable__cell}>
+                    <Button title="Купить"/>
+                </div>
+            </div>
     );
 }
-
 export default RowTable;
