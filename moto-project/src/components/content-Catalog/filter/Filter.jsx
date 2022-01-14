@@ -3,9 +3,7 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
@@ -21,7 +19,6 @@ import Selects from "../selects/Selects";
 import Range from "./range/Range";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
 
 
 function valuetext(value) {
@@ -30,7 +27,7 @@ function valuetext(value) {
   const minDistance = 10;
 
 function Filter(props) {
-    const Accordion = styled((props) => (
+    const AccordionCost = styled((props) => (
         <MuiAccordion disableGutters elevation={0} square {...props} />
       ))(({ theme }) => ({
         '&:not(:last-child)': {
@@ -41,7 +38,7 @@ function Filter(props) {
         },
       }));
       
-      const AccordionSummary = styled((props) => (
+      const AccordionSummaryCost = styled((props) => (
         <MuiAccordionSummary
           expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
           {...props}
@@ -67,26 +64,38 @@ function Filter(props) {
         }
 }));
 
-      const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-        padding: theme.spacing(2),
-        '& .MuiFormGroup-root':{
-            flexDirection:"row"
-        },
-        '& .MuiFormControlLabel-root .MuiFormControlLabel-label':{
-            fontFamily:'SFProDisplayRegular',
-            lineHeight: '17px',
-            fontSize: '14px',
-            color: '#000000'
-        },
+        const AccordionDetailsCost = styled(MuiAccordionDetails)(({ theme }) => ({
+        padding: '9px 9px 18px 0px',
+       
         '& .MuiButtonBase-root':{
-            padding: '6px 12px 6px 12px',
-            marginLeft: '10px'
+            padding: '9px 12px 9px 9px',
+            marginLeft: '10px',
+            maxHeight:'25px'
         },
         '& .MuiButtonBase-root:first-child':{
             marginLeft: '0px'
         },
-}));
+        '& .MuiButtonBase-root:last-child':{
+            background:' #2F3035'
+        },
+}));           
+const FormGroupCost = styled(FormGroup)(({ theme }) => ({
+    flexDirection:"row",
     
+    '& .MuiFormControlLabel-root':{
+        marginLeft:'0px',
+        minWidth:'50%',
+        marginRight:'0px',
+        marginTop: '15px'
+    },
+    '& .MuiFormControlLabel-root .MuiFormControlLabel-label':{
+        fontFamily:'SFProDisplayRegular',
+        lineHeight: '17px',
+        fontSize: '14px',
+        color: '#000000'
+    },
+}));           
+
     const [expanded, setExpanded] = React.useState('panel1');
 
     const handleChange = (panel) => (event, newExpanded) => {
@@ -141,128 +150,127 @@ return (
         
         <div className={s.parameters}>
              {/* Аккардеон Наличие */}
-        <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+        <AccordionCost>
+            <AccordionSummaryCost expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
                 <Typography>Наличие</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-                <FormGroup>
+            </AccordionSummaryCost>
+            <AccordionDetailsCost>
+                <FormGroupCost>
                     <FormControlLabel control={<Checkbox />} label="В наличие" />
                     <FormControlLabel control={<Checkbox />} label="Под заказ" />
-                </FormGroup>
-            </AccordionDetails>
-        </Accordion>
+                </FormGroupCost>
+            </AccordionDetailsCost>
+        </AccordionCost>
 
         {/* Аккардеон Новинки */}
-        <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+        <AccordionCost>
+            <AccordionSummaryCost expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
                 <Typography>Новинки</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-                <FormGroup>
-                    <FormControlLabel control={<Checkbox defaultChecked/>} label="Все" />
-                    <FormControlLabel control={<Checkbox />} label="Новинки" />
-                    <FormControlLabel control={<Checkbox />} label="Акции" />
-                </FormGroup>
-                <Link className={s.link} href="#">Показать ещё</Link>
-            </AccordionDetails>
-        </Accordion>
+            </AccordionSummaryCost>
+            <AccordionDetailsCost>
+                <FormGroupCost>
+                    <FormControlLabel control={<Checkbox defaultChecked/>} label="Все" style={{minWidth:'25%'}} />
+                    <FormControlLabel control={<Checkbox />} label="Новинки" style={{minWidth:'25%'}}/>
+                    <FormControlLabel control={<Checkbox />} label="Акции" style={{minWidth:'25%'}}/>
+                </FormGroupCost>
+            </AccordionDetailsCost>
+        </AccordionCost>
 
         {/* Цена */}
-        <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+        <AccordionCost>
+            <AccordionSummaryCost expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
                 <Typography>Цена</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-                <FormGroup>
+            </AccordionSummaryCost>
+            <AccordionDetailsCost>
+                <FormGroupCost>
                     <Range/>
-                </FormGroup>
-            </AccordionDetails>
-        </Accordion>
+                </FormGroupCost>
+            </AccordionDetailsCost>
+        </AccordionCost>
         
         {/* sections Selects */}
         <Selects/>
         {/* Аккардион Бренд */}
-        <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+        <AccordionCost>
+            <AccordionSummaryCost expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
                 <Typography>Бренд</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-                <FormGroup>
+            </AccordionSummaryCost>
+            <AccordionDetailsCost>
+                <FormGroupCost>
                     <FormControlLabel control={<Checkbox />} label="BRP" />
                     <FormControlLabel control={<Checkbox />} label="Spark 2" />
                     <FormControlLabel control={<Checkbox />} label="Spark 3" />
-                </FormGroup>
-                <Link href="#">Показать ещё</Link>
-            </AccordionDetails>
-        </Accordion>
+                </FormGroupCost>
+            </AccordionDetailsCost>
+            <Link href="#">Показать ещё</Link>
+        </AccordionCost>
         {/* Аккардеон Модель */}
-        <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+        <AccordionCost>
+            <AccordionSummaryCost expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
                 <Typography>Модель</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
+            </AccordionSummaryCost>
+            <AccordionDetailsCost>
                 <SearchModule/>
-                <FormGroup>
+                <FormGroupCost>
                     <FormControlLabel control={<Checkbox />} label="Sea-doo Spark 2" />
                     <FormControlLabel control={<Checkbox />} label="SeaDoo Spark 90 " />
                     <FormControlLabel control={<Checkbox />} label="SeaDoo GTI 155" />
                     <FormControlLabel control={<Checkbox />} label="SeaDoo GTR 230" />
-                </FormGroup>
-                <Link href="#">Показать ещё</Link>
-            </AccordionDetails>
-        </Accordion>
+                </FormGroupCost>
+            </AccordionDetailsCost>
+            <Link href="#">Показать ещё</Link>
+        </AccordionCost>
 
         {/* Акции */}
-        <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+        <AccordionCost>
+            <AccordionSummaryCost expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
                 <Typography>Акции</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-                <FormGroup>
+            </AccordionSummaryCost>
+            <AccordionDetailsCost>
+                <FormGroupCost>
                 <Stack direction="row" spacing={2}>
                     <Button variant="contained">SALE</Button>
                     <Button variant="contained" disabled>NEW</Button>
                     <Button variant="contained" disabled>HIT</Button>
                     <Button variant="contained" color="success">Дилер</Button>
                 </Stack>
-                </FormGroup>
-                <Link href="#">Показать ещё</Link>
-            </AccordionDetails>
-        </Accordion>
+                </FormGroupCost>
+            </AccordionDetailsCost>
+            <Link href="#">Показать ещё</Link>
+        </AccordionCost>
         {/* Аккардеон Страны */}
-        <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+        <AccordionCost>
+            <AccordionSummaryCost expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
                 <Typography>Страны</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-                <FormGroup>
+            </AccordionSummaryCost>
+            <AccordionDetailsCost>
+                <FormGroupCost>
                     <FormControlLabel control={<Checkbox />} label="Россия" />
                     <FormControlLabel control={<Checkbox />} label="Германия" />
                     <FormControlLabel control={<Checkbox />} label="Китай" />
                     <FormControlLabel control={<Checkbox />} label="США" />
-                </FormGroup>
-                <Link href="#">Показать ещё</Link>
-            </AccordionDetails>
-        </Accordion>
+                </FormGroupCost>
+            </AccordionDetailsCost>
+            <Link href="#">Показать ещё</Link>
+        </AccordionCost>
         </div>     
         {/* нихняя кнопка */}
         <ArtButton className={s.btn} variant="contained" disabled>Выбрать</ArtButton>
         {/* Дополнительные параметры */}
-        <Accordion>
+        <AccordionCost>
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel2a-content"
                 id="panel2a-header">
                 <Typography>Дополнительные параметры</Typography>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetailsCost>
                 <Typography>
                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                  malesuada lacus ex, sit amet blandit leo lobortis eget.
                 </Typography>
-            </AccordionDetails>
-        </Accordion>
+            </AccordionDetailsCost>
+        </AccordionCost>
         {/* сбросить фильтр */}
         <Link className={s.droppingLink} disabled>Сбросить фильтр</Link>
     </div>      

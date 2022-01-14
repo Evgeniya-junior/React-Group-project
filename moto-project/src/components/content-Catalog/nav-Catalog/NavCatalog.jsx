@@ -10,6 +10,7 @@ import InputBase from '@mui/material/InputBase';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import ViewComfyAltIcon from '@mui/icons-material/ViewComfyAlt';
 import IconButton from '@mui/material/IconButton';
+import OutlinedInput from '@mui/material/OutlinedInput';
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
    
@@ -52,9 +53,11 @@ return (
                 <InputLabel id="demo-customized-select-label"></InputLabel>
                 <Select labelId="demo-customized-select-label"
                     id="demo-customized-select"
-                    value={filter}
+                    value="По популярности"
                     onChange={handleChange}
-                    input={<BootstrapInput />}>
+                    input={<OutlinedInput />}
+                    // input={<BootstrapInput />}
+                    >
                     <MenuItem value={0}>По популярности</MenuItem>
                     <MenuItem value={10}>По цене</MenuItem>
                     <MenuItem value={20}>По наличию</MenuItem>
@@ -63,13 +66,14 @@ return (
                 </FormControl>
             </div>
        
-        
-            <IconButton aria-label="ViewComfyAltIcon" >
+            <button className={s.mash}></button>
+            <button className={s.burger}></button>
+            {/* <IconButton aria-label="ViewComfyAltIcon" >
                 <ViewComfyAltIcon />
             </IconButton>
             <IconButton aria-label="formatListBulletedIcon">
                 <FormatListBulletedIcon />
-            </IconButton>
+            </IconButton> */}
         </div>
     </div>       
 )
