@@ -31,7 +31,7 @@ export default function MinimumDistanceSlider() {
  
 
   return (
-    <Box sx={{ width: 270 }}>
+    <Box sx={{ width: 290 }}>
       <Slider
         getAriaLabel={() => 'Minimum distance'}
         value={value1}
@@ -43,11 +43,11 @@ export default function MinimumDistanceSlider() {
       <div className={s.conclusion}>
         <div className={s.minInput}>
             <span className={s.minSpan}>от</span>
-            <Input style={{width:'55px'}}/>
+            <Input placeholder='100 000' style={{width:'55px'}}>100 000</Input>
         </div>
         <div className={s.maxInput}>
           <span className={s.maxSpan}>до</span>
-          <Input style={{width:'55px'}}/>
+          <Input placeholder='500 000' style={{width:'55px'}}></Input>
         </div>
       </div>
   </Box>
