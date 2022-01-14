@@ -4,7 +4,7 @@
 
 .catalogCard {
     position: relative;
-    z-index: 10000;
+    background-color: #fff;
     border: 1px solid #CDCDCD;
     border-radius: 3px 3px 0 3px;
     padding: 52px 10px 0px;
@@ -36,6 +36,7 @@
     height: 25px;
     position: absolute;
     top: -1px;
+    border-top: 1px solid #CDCDCD;
     left: -1px;
     display: flex;
     justify-content: center;
