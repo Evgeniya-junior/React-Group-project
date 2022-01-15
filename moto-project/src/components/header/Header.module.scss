@@ -1,73 +1,208 @@
 @import './../../sass/vars.scss';
 @import './../../sass/mixins.scss';
 
-
-
 .header {
-   width: 100%;
-   padding-bottom: 10px;
-   padding-top: 30px;
-   display: grid;
-   grid-template-columns: 1fr 270px 1fr;
-
-   position: relative;
-
-
+   margin-bottom: 45px;
+   @media (max-width: 992px) {
+      margin-bottom: 25px;
+   }
 }
-
-.menu {
-   align-self: center;
-
-
-}
-
-.logo {
-   justify-self: center;
-
-}
-
-.menuList {
-   display: flex;
-   justify-content: space-between;
-   list-style: none;
-
-   padding: 0;
-   margin: 0;
-}
-
-.social {
+.headerBody {
+   min-height: 122px;
    display: flex;
    justify-content: space-between;
    align-items: center;
-
+   gap: 15px;
+   @media (max-width: 992px) {
+      flex-wrap: wrap;
+      padding-top: 25px;
+   }
 }
 
-.adress {
-   font-style: normal;
-   padding: 0;
-   margin: 0;
-   align-self: center;
-
+.menuBody {
+   flex: 0 1 calc(450/1171*100%);
+   @media (max-width: 992px) {
+      order: 2;
+      flex-basis: 100%;
+      overflow: auto;
+      background-color: $baseColor;
+      padding: 0 3px;
+   }
 }
-
-.socialIcons {
-   padding-right: 20px;
-}
-
-.socialList {
+.menuList {
    display: flex;
-   list-style: none;
+   justify-content: space-between;
+   align-items: center;
+   &:not(:last-child) {
+      margin-right: 10px;
+   }
+
+   @media (max-width: 992px) {
+      min-width: 380px;
+   }
 }
 
-.socialItem {
-   cursor: pointer;
+
+.logo {
+   flex: 1 0 90px;
+   text-align: center;
+}
+.logoLink {
+   display: inline-flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.logoImage {
+   width: 53px;
+   height: 42px;
+   margin-bottom: 10px;
+   @media (max-width: 992px) {
+      display: none;
+   }
+}
+.logoText {
+   font-family: 'Staatliches';
+   line-height: 25px;
 }
 
-.socialItem:nth-child(2) {
-   padding-left: 10px;
+.rightBlock {
+   flex: 0 1 calc(450/1171*100%);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   @media (max-width: 992px) {
+      flex-basis: auto;
+   }
+}
+.location {
+
 }
 
-.socialItem:last-child {
-   padding-left: 10px;
+.locationLink {
+   line-height: 24px;
+   font-weight: 700;
+   display: flex;
    position: relative;
+   padding-left: 25px;
+   &::before {
+      content: '';
+      background-image: url('./../../assets/images/icon-svg/location.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 24px;
+      height: 30px;
+      position: absolute;
+      left: 0;
+      bottom: 1px;
+   }
+   &:hover {
+      text-decoration: underline;
+   }
+   @media (max-width: 992px) {
+      display: none;
+   }
+}
+
+.actions {
+   padding-right: 22px;
+}
+.actionsList{
+   display: flex;
+   gap: 10px;
+}
+
+.actionsItem {
+   transition: transform ease-out .15s;
+   &:hover {
+      transform: translateY(-5px);
+   }
+}
+
+.cart {
+   position: relative;
+}
+.cartCount {
+   font-weight: 500;
+   font-size: 10px;
+   line-height: 12px;
+   position: absolute;
+   color: #fff;
+   width: 20px;
+   height: 20px;
+   background-color: $accentColor;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   bottom: -6px;
+   right: -15px;
+}
+
+//---------------------------------------
+
+.iconMenu {
+	display: none;
+	@media (max-width: 992px) {
+		display: block;
+      flex: 0 0 34px;
+		position: relative;
+		height: 27px;
+		cursor: pointer;
+		z-index: 10;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 3px;
+			background-color: #000;
+         border-radius: 3px;
+		}
+		&::before {
+			top: 0px;
+		}
+		&::after {
+			bottom: 0px;
+		}
+		span {
+			top: calc(50% - 1px);
+		}
+		.menu-open & {
+			span {
+				transform: scale(0);
+			}
+			&::before {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+			}
+			&::after {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+	}
+}
+
+
+//---------------------------------------
+.headerMenu {
+   min-height: 53px;
+   background-color: $baseColor;
+   display: grid;
+   align-items: center;
+   @media (max-width: 992px) {
+      display: none;
+   }
+}
+.headerMenuBody {
+   padding: 0px 2px;
+}
+.headerMenuList {
+   display: flex;
+   justify-content: space-between;
+   gap: 10px;
 }
