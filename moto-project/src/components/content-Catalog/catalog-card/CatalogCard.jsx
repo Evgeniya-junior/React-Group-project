@@ -8,7 +8,11 @@ import cartIcon from './../../../assets/images/catalog-card/cart.svg';
 function CatalogCard(props) {
     return (
         <div className={s.catalogCard}>
-            <span className={s.sale}>SALE</span>
+            {props.sale ? 
+                <span className={s.sale}>SALE</span> : 
+                <span></span>
+            }
+            
             <div className={s.favorite}>
                 <CheckboxFavorite/>
             </div>
@@ -23,12 +27,20 @@ function CatalogCard(props) {
                     {props.title}
                 </a>
             </h2>
-            <div className={s.catalogCardBody}>
-                <div className={s.price}>{props.price}</div>
-                <div className={s.cart}>
-                    <img src={cartIcon} alt="Корзина" />
+            {props.price ? 
+                <div className={s.catalogCardBody}>
+                    <div className={s.price}>{props.price}</div>
+                    <div className={s.cart}>
+                        <img src={cartIcon} alt="Корзина" />
+                    </div>
+                </div> : 
+                <div className={s.catalogCardBody}>
+                    <div className={s.noPrice}>
+                        <p className={s.noPriceText}>нет в наличии</p>
+                        <a href="" className={s.message}>Сообщить о поступлении</a>
+                    </div>
                 </div>
-            </div>
+            }
         </div>
     );
 }
