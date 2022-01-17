@@ -7,7 +7,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import InputBase from '@mui/material/InputBase';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
-
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 function SelectSection(props) {
     const [age, setAge] = React.useState('');

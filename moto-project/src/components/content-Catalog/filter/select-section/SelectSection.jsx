@@ -59,6 +59,7 @@ function SelectSection(props) {
                         onChange={handleChange} 
                         label={props.label} 
                         input={<BootstrapInput />}
+                        expandIcon={<ExpandMoreIcon />}
                         // data-testid={ArrowForwardIosSharpIcon}
                         >
                     <MenuItem value="" ><em>None</em></MenuItem>
