@@ -27,7 +27,7 @@ function ProductCard(props) {
     return (
         <div className={s.productCard}>
             <div className={s.imageBox}>
-                {props.productData.price ? <div className={s.sale}>Sale</div> : ''}
+                {props.productData.oldPrice ? <div className={s.sale}>Sale</div> : ''}
                 <img className={s.image} src={props.productData.image} alt="Гидроцикл" /> 
                 <del class={s.oldPrice}>{props.productData.oldPrice}</del>
                 <p class={s.price}>{props.productData.price}</p>

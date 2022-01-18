@@ -53,9 +53,7 @@ function Filter(props) {
           
         },
         '& .MuiTypography-root':{
-            fontFamily: 'SF Pro Display',
-            fontStyle: "normal",
-            fontWight: '600',
+            fontWeight: '600',
             fontSize: '16px' ,
             color: '#2F3035',
         },
@@ -89,7 +87,6 @@ const FormGroupCost = styled(FormGroup)(({ theme }) => ({
         marginTop: '15px'
     },
     '& .MuiFormControlLabel-root .MuiFormControlLabel-label':{
-        fontFamily:'SFProDisplayRegular',
         lineHeight: '17px',
         fontSize: '14px',
         color: '#000000'
@@ -125,7 +122,6 @@ const FormGroupCost = styled(FormGroup)(({ theme }) => ({
         };
         const AntTab=styled(Tab)({
             padding:'7px',
-            fontFamily: 'SFProDisplayBold',
             fontSize: '16px',
             color: '#2F3035',
             '&.MuiButtonBase-root.MuiTab-root':{
