@@ -31,7 +31,7 @@ function SpecsTable(props) {
 
         <details>
                 <summary>Показать еще</summary>
-                <table className={s.specsTable}>
+                <table className={s.specsTableMore}>
                     <tbody>
                         <RowTableSpecs 
                             td1={props.characteristicData[5][0]}

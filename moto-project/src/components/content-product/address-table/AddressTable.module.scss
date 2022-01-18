@@ -5,9 +5,6 @@
     display: grid;
     grid-template-columns: 26% 22% 18% 21% 13%;
     padding-bottom: 41px;
-    font-size: 20px;
-    line-height: 24px;
-    color: #2F3035;
     font-weight: 500;
     @include media (md) {
         display: none;

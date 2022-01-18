@@ -23,9 +23,7 @@
 }
 .title{
     max-width: 140px;
-    font-family:'SFProDisplaySemibold';
-    font-weight: bold;
-    font-style: normal;
+    font-weight: 700;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
@@ -44,18 +42,13 @@
     width: 100%;
 }
 .text{
-    font-family: 'SFProDisplayRegular';
-    font-style: normal;
-    font-weight: normal;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
     color: $primaryColor;
 }
 .time{
-    font-family:'BarlowBold';
-    font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 18px;
     line-height: 22px;
     text-align: center;

@@ -22,39 +22,41 @@ const characteristicData = [
     ["Мощность, л.с.", "155"],
     ["Тип двигателя", "Бензиновый"],
     ["Год выпуска", "2018"],
-    ["Еще характеристика 1", "Еще значение 1"],
-    ["Еще характеристика 2", "Еще значение 2"],
-    ["Еще характеристика 3", "Еще значение 3"],
-    ["Еще характеристика 4", "Еще значение 4"],
-    ["Еще характеристика 5", "Еще значение 5"],
+    ["Еще характеристика 1", "значение 1"],
+    ["Еще характеристика 2", "значение 2"],
+    ["Еще характеристика 3", "значение 3"],
+    ["Еще характеристика 4", "значение 4"],
+    ["Еще характеристика 5", "значение 5"],
 ]
 
 
 function ContentProduct(props) {
     return (
         <main className={s.contentProduct}>
-            <h2>3-я страница</h2>
-                <div className={s.contentBreadcrumb}>
-                    <Breadcrumbs 
-                        aria-label="breadcrumb" 
-                        separator={<NavigateNextIcon fontSize="small" />} 
-                        aria-label="breadcrumb"
-                    >
-                        <Link underline="hover" color="inherit" href="/">
-                            Главная
-                        </Link>
-                        <Link underline="hover" color="inherit" href="/jetskis/">
-                            Гидроциклы
-                        </Link>
-                        <span>{productData.title}</span>
-                    </Breadcrumbs>
-                </div>
-                <ProductCard productData={productData} characteristicData={characteristicData}/>
-                <ProductTabs/>
-            <BuyWithProduct className={s.buyWithProduct} title='С этим товаром покупают' 
-                text1='запчасти' text2='моторы' text3='шины' text4='электроника' 
-                text5='инструменты' text6='аксессуары'
-            />
+            <div className="container">
+                    <div className={s.contentBreadcrumb}>
+                        <Breadcrumbs
+                            className={s.breadcrumb} 
+                            aria-label="breadcrumb" 
+                            separator={<NavigateNextIcon fontSize="small" />} 
+                            aria-label="breadcrumb"
+                        >
+                            <Link underline="hover" color="inherit" href="/">
+                                Главная
+                            </Link>
+                            <Link underline="hover" color="inherit" href="/jetskis/">
+                                Гидроциклы
+                            </Link>
+                            <span>{productData.title}</span>
+                        </Breadcrumbs>
+                    </div>
+                    <ProductCard productData={productData} characteristicData={characteristicData}/>
+                    <ProductTabs/>
+                <BuyWithProduct className={s.buyWithProduct} title='С этим товаром покупают' 
+                    text1='запчасти' text2='моторы' text3='шины' text4='электроника' 
+                    text5='инструменты' text6='аксессуары'
+                />
+            </div>
         </main>
     );
 }

@@ -43,6 +43,7 @@ const dataCatalogCards = [
 function ContentCatalog(props) {
 return (
     <div className={s.content}>
+        <div className="container">
             <div className={s.breadcrumbs}>
                 <Breadcrumbs aria-label="breadcrumb"separator={<NavigateNextIcon fontSize="small" />}
                     aria-label="breadcrumb">
@@ -123,9 +124,8 @@ return (
                     </div>
                 </div>
             </div>
-            
-
         </div>
+    </div>
     );
 }
 

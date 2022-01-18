@@ -1,5 +1,7 @@
 import s from "./Content.module.scss";
 
+import Advise from "./advise/Advise";
+
 import moto from "./../../assets/images/moto.png";
 import jetSki from "./../../assets/images/jet-ski.png";
 import boat from "./../../assets/images/boat.png";
@@ -48,30 +50,34 @@ function Content(props) {
   }
   return (
     <div className={s.content}>
-      <section className={s.baner}>
-        <SliderBaner />
-        <SaleCard className={s.saleCard} img={engine} title="Лодочный мотор Suzuki DF9.9BRS" date="31.08.2020"/>
-      </section>
+      <div className="container">
+        <section className={s.baner}>
+          <SliderBaner />
+          <SaleCard className={s.saleCard} img={engine} title="Лодочный мотор Suzuki DF9.9BRS" date="31.08.2020"/>
+        </section>
 
-      <section className={s.search}>
-        <Search/>
-      </section>
+        <section className={s.search}>
+          <Search/>
+        </section>
 
-      <section className={s.products}>
-        <Products data={sectionData} data2={sectionData2} data3={sectionData3} data4={sectionData4} data5={sectionData5} data6={sectionData6}/>
-      </section>
+        <section className={s.products}>
+          <Products data={sectionData} data2={sectionData2} data3={sectionData3} data4={sectionData4} data5={sectionData5} data6={sectionData6}/>
+        </section>
 
-      <section className={s.popularProducts}>
-        <PopularProducts title='Популярные товары' text1='запчасти' text2='моторы' text3='шины' text4='электроника' text5='инструменты' text6='аксессуары' buttonText='Показать еще'/>
-      </section>
+        <section className={s.popularProducts}>
+          <PopularProducts title='Популярные товары' text1='запчасти' text2='моторы' text3='шины' text4='электроника' text5='инструменты' text6='аксессуары' buttonText='Показать еще'/>
+        </section>
 
-      <section className={s.saleBaner}>
-        <SaleBaner data={sectionData} data5={sectionData5}/>
-      </section>
+        <section className={s.saleBaner}>
+          <SaleBaner data={sectionData} data5={sectionData5}/>
+        </section>
 
-      <section className={s.buyWithProduct}>
-        <BuyWithProduct className={s.buyWithProduct} title='С этим товаром покупают' text1='запчасти' text2='моторы' text3='шины' text4='электроника' text5='инструменты' text6='аксессуары'/>
-      </section>
+        <section className={s.buyWithProduct}>
+          <BuyWithProduct className={s.buyWithProduct} title='С этим товаром покупают' text1='запчасти' text2='моторы' text3='шины' text4='электроника' text5='инструменты' text6='аксессуары'/>
+        </section>
+
+        {/* <Advise /> */}
+      </div>
     </div>
 
   );

@@ -55,9 +55,10 @@ function ProductCard(props) {
                         />
                     </div>
                 </div>
+                <CardTabs characteristicData={props.characteristicData}/>
             </div>
             <div className={s.specs}>
-            <CardTabs characteristicData={props.characteristicData}/>
+            
             
             </div>
             <div className={s.cardButton}>
