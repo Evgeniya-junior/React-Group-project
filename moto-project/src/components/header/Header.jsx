@@ -1,15 +1,10 @@
 import React from "react";
-import { NavLink } from 'react-router-dom';
 import s from "./Header.module.scss";
 
-import favorite from './../../assets/images/icon-svg/favorite.svg';
-import user from './../../assets/images/icon-svg/user.svg';
-import cart from './../../assets/images/icon-svg/cart.svg';
-import logo from './../../assets/images/icon-svg/logo.svg';
 import HeaderMenuItem from "./header-menu-item/HeaderMenuItem";
 import MenuItem from "./menu-item/MenuItem";
-
-
+import sprite from './../../components/components/sprite/sprite.svg';
+import MenuBurger from "./menu-burger/MenuBurger";
 
 function Header() {
 
@@ -18,6 +13,7 @@ function Header() {
          <div className="container">
             <div className={s.headerBody}>
                <button type="button" class={s.iconMenu}><span></span></button>
+               <MenuBurger/>
                <nav class={s.menuBody}>
                   <ul class={s.menuList}>
                      <MenuItem text="Магазины" link="/shops"/>
@@ -26,33 +22,40 @@ function Header() {
                   </ul>
                </nav>
                <div class={s.logo}>
-                  <a  class={s.logoLink} href="">
-                     <img class={s.logoImage} src={logo} alt="" />
+                  <a  class={s.logoLink} href="#">
+                     <svg class={s.logoImage} width="53" height="43" viewBox="0 0 53 43">
+                        <use xlinkHref={sprite + "#logo"}></use>
+                     </svg>
                      <span class={s.logoText}>DRIVE MOTO</span>
                   </a>
                </div>
                <div className={s.rightBlock}>
-                  <div href="" className={s.location}>
-                     <a href="" className={s.locationLink}>
+                  <div className={s.location}>
+                     <a href="#" className={s.locationLink}>
                         <span>Москва,  ул. Науки  25</span>
                      </a>
                   </div>
-                  
                   <div className={s.actions}>
                      <ul className={s.actionsList}>
                         <li className={s.actionsItem}>
-                           <a href="" className={s.favorite}>
-                              <img src={favorite} alt="" />
+                           <a href="#" className={s.favorite}>
+                              <svg width="24" height="24" viewBox="0 0 24 24">
+                                 <use xlinkHref={sprite + "#favorite"}></use>
+                              </svg>
                            </a>
                         </li>
                         <li className={s.actionsItem}>
-                           <a href="" className={s.user}>
-                              <img src={user} alt="" />
+                           <a href="#" className={s.user}>
+                              <svg width="25" height="24" viewBox="0 0 25 24">
+                                 <use xlinkHref={sprite + "#user"}></use>
+                              </svg>
                            </a>
                         </li>
                         <li className={s.actionsItem}>
-                           <a href="" className={s.cart}>
-                              <img src={cart} alt="" />
+                           <a href="#" className={s.cart}>
+                              <svg width="31" height="23" viewBox="0 0 31 23">
+                                 <use xlinkHref={sprite + "#cart"}></use>
+                              </svg>
                               <span className={s.cartCount}>1</span>
                            </a>
                         </li>
