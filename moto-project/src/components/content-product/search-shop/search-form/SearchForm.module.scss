@@ -12,6 +12,9 @@
         background-color: #F0F0F4;
         border-radius: 3px;
         text-indent: 17px;
+        font-size: 15px;
+        line-height: 18px;
+        font-family: 'Barlow', sans-serif;
 
         &:focus-visible {
             outline: 2px solid $accentColor;

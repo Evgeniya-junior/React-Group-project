@@ -41,15 +41,7 @@ const Tab = styled(TabUnstyled)`
     }
 
     &:hover {
-        color: #2F3035;
-    }
-
-    // хз к чему стили
-    &.${buttonUnstyledClasses.focusVisible} {
-        color: #000;
-        outline: none;
-        background-color: ${primary[600]};
-        border-bottom: 2px solid ${primary[600]};
+        border-bottom: 2px solid #1C62CD;
     }
 
     &.${tabUnstyledClasses.selected} {

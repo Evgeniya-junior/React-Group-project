@@ -43,7 +43,12 @@ const dataCatalogCards = [
 function ContentCatalog(props) {
 return (
     <div className={s.content}>
+<<<<<<< HEAD
         <div className={s.breadcrumbs}>
+=======
+        <div className="container">
+            <div className={s.breadcrumbs}>
+>>>>>>> 5e5a3b13181b9e3c3a082cf2d7c336e86a13f403
                 <Breadcrumbs aria-label="breadcrumb"separator={<NavigateNextIcon fontSize="small" />}
                     aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">Главная</Link>
@@ -121,6 +126,10 @@ return (
                         <Pagination count={11} variant="outlined" shape="rounded" color='primary' />
                     </div>
                 </div>
+<<<<<<< HEAD
+=======
+            </div>
+>>>>>>> 5e5a3b13181b9e3c3a082cf2d7c336e86a13f403
         </div>
     </div>
     );

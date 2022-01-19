@@ -21,11 +21,11 @@ function RowTable(props) {
                 </div>
                 <div className={s.rowTable__cell}>
                     <span className={s.rowTable__none}>Доступно</span>
-                    {props.availability}
+                    <span>{props.availability}</span>
                 </div>
                 <div className={s.rowTable__cell}>
                     <span className={s.rowTable__none}>Количество</span>
-                    {props.number}
+                    <span>{props.number}</span>
                 </div>
                 <div className={s.rowTable__cell}>
                     <Button title="Купить"/>

@@ -1,5 +1,8 @@
 @import './../../sass/mixins.scss';
 
+.content {
+    outline: 10px solid green;
+}
 .baner{
     margin-bottom: 80px;
     display: flex;

@@ -1,8 +1,18 @@
+@import './../../sass/vars.scss';
+@import './../../sass/mixins.scss';
+
 .contentProduct {
-    border: 3px solid red;
+    outline: 10px solid red;
+    padding-top: 20px;
 }
 .contentBreadcrumb {
     margin-bottom: 44px;
+}
+
+.breadcrumb {
+    font-size: 15px;
+    line-height: 18px;
+    color: $mainGrey;
 }
 
 h2 {

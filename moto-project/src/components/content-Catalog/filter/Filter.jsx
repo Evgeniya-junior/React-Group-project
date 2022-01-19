@@ -52,7 +52,7 @@ function Filter(props) {
             marginLeft: theme.spacing(1)
         },
         '& .MuiTypography-root':{
-            fontWight: '600',
+            fontWeight: '600',
             fontSize: '16px' ,
             color: '#2F3035',
         },

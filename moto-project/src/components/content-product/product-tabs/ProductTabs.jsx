@@ -43,15 +43,7 @@ const Tab = styled(TabUnstyled)`
     }
 
     &:hover {
-        color: #2F3035;
-    }
-
-    // хз к чему стили
-    &.${buttonUnstyledClasses.focusVisible} {
-        color: #000;
-        outline: none;
-        background-color: ${primary[600]};
-        border-bottom: 2px solid ${primary[600]};
+        border-bottom: 2px solid #1C62CD;
     }
 
     &.${tabUnstyledClasses.selected} {
@@ -91,8 +83,8 @@ export default function ProductTabs() {
                     <Tab>Характеристики</Tab>
                     <Tab>Отзывы</Tab>
                     <Tab>Самовывоз</Tab>
-                    <Tab>Доставка</Tab>
-                    <Tab disabled>Cервис</Tab>
+                    <Tab disabled>Доставка</Tab>
+                    <Tab>Cервис</Tab>
                     <Tab>Гарантия</Tab>
                 </TabsList>
             </div>

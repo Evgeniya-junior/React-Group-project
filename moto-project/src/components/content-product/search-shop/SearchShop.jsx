@@ -12,10 +12,8 @@ const BpIcon = styled('span')(({ theme }) => ({
     borderRadius: '2px',
     width: 14,
     height: 14,
-    boxShadow:
-        theme.palette.mode === 'dark'
-            ? '0 0 0 1px rgb(16 22 26 / 40%)'
-            : 'inset 0 0 0 1px rgba(16,22,26,.2), inset 0 -1px 0 rgba(16,22,26,.1)',
+    boxShadow: 'none',
+    border: '1px solid #C4C4C4',
     backgroundColor: theme.palette.mode === 'dark' ? '#394b59' : '#f5f8fa',
     backgroundImage:
         theme.palette.mode === 'dark'
@@ -35,18 +33,23 @@ const BpIcon = styled('span')(({ theme }) => ({
     },
 }));
 
+// стили чекбокса 
 const BpCheckedIcon = styled(BpIcon)({
-    backgroundColor: '#137cbd',
-    backgroundImage: 'linear-gradient(180deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,0))',
+    backgroundColor: '#fff',
+    border: '2px solid #1C62CD',
     '&:before': {
         display: 'block',
-        width: 14,
-        height: 14,
-        backgroundImage: 'radial-gradient(#fff,#fff 28%,transparent 32%)',
+        width: 6,
+        height: 6,
+        position: 'relative',
+        backgroundColor: '#1C62CD',
+        borderRadius: 1,
+        top: 2,
+        left: 2,
         content: '""',
     },
     'input:hover ~ &': {
-        backgroundColor: '#106ba3',
+        // backgroundColor: '#106ba3',
     },
 });
 
@@ -78,7 +81,7 @@ function SearchShop() {
             </div>
             <FormControl component="fieldset">
                 <RadioGroup defaultValue="week" aria-label="Когда забрать" name="customized-radios">
-                    <div className={s.RadioWrapper}>
+                    <div className={s.radioWrapper}>
                         <FormControlLabel value="today" control={<BpRadio />} label="Забрать сегодня" />
                         <FormControlLabel value="week" control={<BpRadio />} label="Забрать в течение недели" />
                     </div>
