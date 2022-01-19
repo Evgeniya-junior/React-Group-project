@@ -19,7 +19,6 @@ function App() {
           <Content />
           <ContentCatalog />
           <ContentProduct />
-          <Advise />
           <Footer/>
         </div>
       </div>

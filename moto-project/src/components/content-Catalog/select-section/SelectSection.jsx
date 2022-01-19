@@ -9,6 +9,16 @@ import InputBase from '@mui/material/InputBase';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+// const InputBaseCost = styled(InputBase)(({ theme }) => ({
+//   '&.MuiInputLabel-root':{
+//           fontFamily:' Barlow',
+//           fontSize: '14px',
+//           lineHeight: '17px',
+//           color: '#2F3035'
+//       },
+// }));
+// MuiFormLabel-root-MuiInputLabel-root
+
 function SelectSection(props) {
     const [age, setAge] = React.useState('');
 
@@ -43,7 +53,7 @@ function SelectSection(props) {
                 <h4 className={s.text}>{props.label}</h4>
             </div>
             <div className={s.select}>
-                <FormControl sx={{ m: 1, minWidth: 68 }}>
+                <FormControl sx={{ m: 1, minWidth: 50 }}>
                 <InputLabel id="demo-simple-select-autowidth-label"></InputLabel>
                 <Select labelId="demo-customized-select-label"
                         id="demo-customized-select"

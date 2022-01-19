@@ -49,12 +49,9 @@ function Filter(props) {
         padding:'0',
         
         '& .MuiAccordionSummary-content': {
-            marginLeft: theme.spacing(1),
-          
+            marginLeft: theme.spacing(1)
         },
         '& .MuiTypography-root':{
-            fontFamily: 'SF Pro Display',
-            fontStyle: "normal",
             fontWight: '600',
             fontSize: '16px' ,
             color: '#2F3035',
@@ -70,7 +67,12 @@ function Filter(props) {
         '& .MuiButtonBase-root':{
             padding: '9px 12px 9px 9px',
             marginLeft: '10px',
-            maxHeight:'25px'
+            maxHeight:'25px',
+            fontWeight:'bold',
+            fontFamily:'SFProDisplay',
+            fontSize: '12px',
+            lineHeight: '14px',
+            borderRadius:0,
         },
         '& .MuiButtonBase-root:first-child':{
             marginLeft: '0px'
@@ -89,7 +91,6 @@ const FormGroupCost = styled(FormGroup)(({ theme }) => ({
         marginTop: '15px'
     },
     '& .MuiFormControlLabel-root .MuiFormControlLabel-label':{
-        fontFamily:'SFProDisplayRegular',
         lineHeight: '17px',
         fontSize: '14px',
         color: '#000000'
@@ -125,7 +126,6 @@ const FormGroupCost = styled(FormGroup)(({ theme }) => ({
         };
         const AntTab=styled(Tab)({
             padding:'7px',
-            fontFamily: 'SFProDisplayBold',
             fontSize: '16px',
             color: '#2F3035',
             '&.MuiButtonBase-root.MuiTab-root':{
@@ -236,7 +236,6 @@ return (
                 </Stack>
                 </FormGroupCost>
             </AccordionDetailsCost>
-            <Link href="#">Показать ещё</Link>
         </AccordionCost>
         {/* Аккардеон Страны */}
         <AccordionCost>

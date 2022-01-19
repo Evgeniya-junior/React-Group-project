@@ -23,7 +23,7 @@
 }
 .title{
     max-width: 140px;
-    font-family:'SFProDisplaySemibold';
+    font-family:'SFProDisplaySemibold',sans-serif;
     font-weight: bold;
     font-style: normal;
     font-size: 18px;
@@ -44,7 +44,7 @@
     width: 100%;
 }
 .text{
-    font-family: 'SFProDisplayRegular';
+    font-family: 'SFProDisplayRegular',sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -53,7 +53,7 @@
     color: $primaryColor;
 }
 .time{
-    font-family:'BarlowBold';
+    font-family:'BarlowBold',sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;

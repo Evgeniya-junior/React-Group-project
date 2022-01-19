@@ -1,20 +1,19 @@
+@import './../../../sass/vars.scss';
+
 .navCatalog{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .btn{
-    background: #f0f0f4;
+    background: $baseColor;
     padding: 4px 23px;
     margin-right:8px;
     border: none;
     border-radius: 3px;
-    font-family: 'SFProDisplayRegular';
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 17px;
-    color: #2F3035;
+    color: $primaryColor;
     opacity: 0.7;
     &:hover{
         opacity: 1;
@@ -37,6 +36,7 @@
     height: 23px;
     margin-right: 10px;
     border: none;
+    margin-left: 34px;
 }
 .burger{
     content:'';

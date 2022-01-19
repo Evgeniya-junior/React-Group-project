@@ -43,17 +43,16 @@ const dataCatalogCards = [
 function ContentCatalog(props) {
 return (
     <div className={s.content}>
-            <div className={s.breadcrumbs}>
+        <div className={s.breadcrumbs}>
                 <Breadcrumbs aria-label="breadcrumb"separator={<NavigateNextIcon fontSize="small" />}
                     aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">Главная</Link>
                     <Link underline="hover" color="inherit" href="/jetskis/">Гидроциклы</Link>
                 </Breadcrumbs>
-            </div>
-            <h2 className={s.title}>Гидроциклы</h2>
-            <NavCatalog/>
-            
-            <div className={s.catalogInner}>
+        </div>
+        <h2 className={s.title}>Гидроциклы</h2>
+        <NavCatalog/>
+        <div className={s.catalogInner}>
                 <Filter />
                 <div className={s.catalogBody}>
                     <div className={s.catalogContent}>
@@ -122,10 +121,8 @@ return (
                         <Pagination count={11} variant="outlined" shape="rounded" color='primary' />
                     </div>
                 </div>
-            </div>
-            
-
         </div>
+    </div>
     );
 }
 

@@ -4,7 +4,8 @@
     display: flex;
     justify-content: center;
     align-self: center;
-    padding: 40px;
+    margin-top: 40px;
+    // padding: 40px;
     @include media(md){
         width: 100%;
         background: white;

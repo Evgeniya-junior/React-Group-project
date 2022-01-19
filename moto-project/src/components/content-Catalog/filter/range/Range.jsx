@@ -1,11 +1,19 @@
 import * as React from 'react';
 import s from './Range.module.scss';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import MuiInput from '@mui/material/Input';
 import Input from '@mui/material/Input';
+
+const InputCost = styled(Input)(({ theme }) => ({
+  '&.MuiInputBase-root':{
+          fontFamily:' Barlow',
+          fontSize: '14px',
+          lineHeight: '17px',
+          color: '#2F3035'
+      },
+}));
+
 
 function valuetext(value) {
   return `${value}`;
@@ -28,7 +36,7 @@ export default function MinimumDistanceSlider() {
     }
   };
 
- 
+
 
   return (
     <Box sx={{ width: 290 }}>
@@ -43,11 +51,11 @@ export default function MinimumDistanceSlider() {
       <div className={s.conclusion}>
         <div className={s.minInput}>
             <span className={s.minSpan}>от</span>
-            <Input placeholder='100 000' style={{width:'55px'}}>100 000</Input>
+            <InputCost placeholder='100 000' style={{width:'55px'}}></InputCost>
         </div>
         <div className={s.maxInput}>
           <span className={s.maxSpan}>до</span>
-          <Input placeholder='500 000' style={{width:'55px'}}></Input>
+          <InputCost placeholder='500 000' style={{width:'55px'}}></InputCost>
         </div>
       </div>
   </Box>
