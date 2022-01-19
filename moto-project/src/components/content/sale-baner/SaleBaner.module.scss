@@ -1,8 +1,8 @@
 @import './../../../sass/mixins.scss';
 
 .sale{
-    background-color: #1C62CD;
-    padding-left: 1%;
+    background-color: $accentColor;
+    padding: 28px 1%;
     display: grid;
     grid-template-columns: 152px 180px 310px 1fr;
     grid-template-areas: 
@@ -49,6 +49,7 @@
 .saleText{
     font-weight: 700;
     font-style: normal;
+    font-weight: bold;
     font-size: 36px;
     line-height: 36px;
     color: #FFFFFF;
@@ -61,7 +62,7 @@
     }
     @include media(s){
         font-size: 18px;
-        line-height: normal;
+        line-height: 18px;
     }
     // @media screen and (max-width:960px){
     //     grid-column:1/4 ;
@@ -79,6 +80,7 @@
     align-items: center;
     @include media(md){
         justify-content: center;
+        min-width: 132px;
     }
 }
 .button{
@@ -95,7 +97,6 @@
     @include media(s){
         font-size: 14px;
         line-height: normal;
-        min-width: 132px;
         padding: 5px 3px;
     }
 }

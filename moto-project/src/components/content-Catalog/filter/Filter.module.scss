@@ -1,21 +1,18 @@
+@import './../../../sass/vars.scss';
+
 .filter{
     width: 304px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-// .parameters{
-//     margin-bottom: 40px;
-// }
+
 #panel1a-header{
     padding: 0 !important;
 }
 .tabs{
     align-self: flex-start;
 }
-// .MuiTabs-root{
-//     align-items:center;
-// }
 .link{
     margin-top: 15px;
 }
@@ -37,5 +34,5 @@
     font-size: 13px;
     line-height: 16px;
     text-decoration-line: underline;
-    color: #C4C4C4;
+    color: $mainGrey;
 }

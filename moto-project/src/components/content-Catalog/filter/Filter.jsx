@@ -14,8 +14,8 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
-import SearchModule from "./../search-model/SearchModel";
-import Selects from "../selects/Selects";
+import SearchModule from "./search-model/SearchModel";
+import Selects from "./selects/Selects";
 import Range from "./range/Range";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
@@ -49,8 +49,7 @@ function Filter(props) {
         padding:'0',
         
         '& .MuiAccordionSummary-content': {
-            marginLeft: theme.spacing(1),
-          
+            marginLeft: theme.spacing(1)
         },
         '& .MuiTypography-root':{
             fontWeight: '600',
@@ -68,7 +67,11 @@ function Filter(props) {
         '& .MuiButtonBase-root':{
             padding: '9px 12px 9px 9px',
             marginLeft: '10px',
-            maxHeight:'25px'
+            maxHeight:'25px',
+            fontWeight:'bold',
+            fontSize: '12px',
+            lineHeight: '14px',
+            borderRadius:0,
         },
         '& .MuiButtonBase-root:first-child':{
             marginLeft: '0px'
@@ -232,7 +235,6 @@ return (
                 </Stack>
                 </FormGroupCost>
             </AccordionDetailsCost>
-            <Link href="#">Показать ещё</Link>
         </AccordionCost>
         {/* Аккардеон Страны */}
         <AccordionCost>

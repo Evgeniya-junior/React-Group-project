@@ -50,11 +50,10 @@ return (
                     <Link underline="hover" color="inherit" href="/">Главная</Link>
                     <Link underline="hover" color="inherit" href="/jetskis/">Гидроциклы</Link>
                 </Breadcrumbs>
-            </div>
-            <h2 className={s.title}>Гидроциклы</h2>
-            <NavCatalog/>
-            
-            <div className={s.catalogInner}>
+        </div>
+        <h2 className={s.title}>Гидроциклы</h2>
+        <NavCatalog/>
+        <div className={s.catalogInner}>
                 <Filter />
                 <div className={s.catalogBody}>
                     <div className={s.catalogContent}>

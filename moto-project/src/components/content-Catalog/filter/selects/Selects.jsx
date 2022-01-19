@@ -1,5 +1,5 @@
 import s from "./Selects.module.scss";
-import SelectSection from "./../select-section/SelectSection";
+import SelectSection from "./../../filter/select-section/SelectSection";
 
 
 function Selects(props) {
