@@ -23,7 +23,7 @@ function SelectSection(props) {
     const BootstrapInput = styled(InputBase)(({ theme }) => ({
         
         '& .MuiInputBase-input': {
-          borderRadius: 4,
+          borderRadius: 0,
           position: 'relative',
           backgroundColor: theme.palette.background.paper,
           border: 'none',
@@ -35,7 +35,7 @@ function SelectSection(props) {
             'SFProDisplayRegular'
           ].join(','),
           '&:focus': {
-            borderRadius: 4,
+            borderRadius: 0,
             borderColor: '#80bdff',
             boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
           },
@@ -59,7 +59,7 @@ function SelectSection(props) {
                         onChange={handleChange} 
                         label={props.label} 
                         input={<BootstrapInput />}
-                        expandIcon={<ExpandMoreIcon />}
+                        expandIcon={<ArrowForwardIosSharpIcon />}
                         // data-testid={ArrowForwardIosSharpIcon}
                         >
                     <MenuItem value="" ><em>None</em></MenuItem>

@@ -14,8 +14,8 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
-import SearchModule from "./../search-model/SearchModel";
-import Selects from "../selects/Selects";
+import SearchModule from "./search-model/SearchModel";
+import Selects from "./selects/Selects";
 import Range from "./range/Range";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
@@ -69,7 +69,6 @@ function Filter(props) {
             marginLeft: '10px',
             maxHeight:'25px',
             fontWeight:'bold',
-            fontFamily:'SFProDisplay',
             fontSize: '12px',
             lineHeight: '14px',
             borderRadius:0,

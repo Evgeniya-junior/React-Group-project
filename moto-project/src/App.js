@@ -14,21 +14,11 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-<<<<<<< HEAD
-        <div className="container">
-          <Header />
-          <Content />
-          <ContentCatalog />
-          <ContentProduct />
-          <Footer/>
-        </div>
-=======
         <Header />
         <Content />
         <ContentCatalog />
         <ContentProduct />
         <Footer/>
->>>>>>> 5e5a3b13181b9e3c3a082cf2d7c336e86a13f403
       </div>
     </BrowserRouter>
   );
