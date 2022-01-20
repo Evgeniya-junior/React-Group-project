@@ -44,6 +44,9 @@ const Tab = styled(TabUnstyled)`
 
     &:hover {
         border-bottom: 2px solid #1C62CD;
+        @media screen and (max-width: 992px) {
+            border-bottom: 0;
+        } 
     }
 
     &.${tabUnstyledClasses.selected} {
@@ -70,6 +73,7 @@ const TabsList = styled(TabsListUnstyled)`
     justify-content: space-between;
     @media screen and (max-width: 992px) {
         flex-direction: column;
+        gap: 35px;
         align-items: flex-start;
     }
 `;

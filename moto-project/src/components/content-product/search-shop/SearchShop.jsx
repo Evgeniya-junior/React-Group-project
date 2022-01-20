@@ -79,7 +79,7 @@ function SearchShop() {
                 <span>Магазин</span>
                 <SearchForm/>
             </div>
-            <FormControl component="fieldset">
+            <FormControl className={s.fieldset} component="fieldset">
                 <RadioGroup defaultValue="week" aria-label="Когда забрать" name="customized-radios">
                     <div className={s.radioWrapper}>
                         <FormControlLabel value="today" control={<BpRadio />} label="Забрать сегодня" />

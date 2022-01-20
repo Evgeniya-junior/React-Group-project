@@ -34,7 +34,7 @@ function ProductCard(props) {
                 <a class={s.link} href="#">Нашли дешевле? Снизим цену!</a>
             </div>
 
-            <div className={s.header}>
+            <div className={s.body}>
                 <h1 className={s.title}>{props.productData.title}</h1>
                 <p className={s.code}>Код товара: {props.productData.code}</p>
                 <div className={s.rating}>
@@ -55,12 +55,11 @@ function ProductCard(props) {
                         />
                     </div>
                 </div>
-                <CardTabs characteristicData={props.characteristicData}/>
+                <div className={s.specs}>
+                    <CardTabs characteristicData={props.characteristicData}/>
+                </div>
             </div>
-            <div className={s.specs}>
             
-            
-            </div>
             <div className={s.cardButton}>
                 <Button title="Купить"/>
             </div>

@@ -5,6 +5,7 @@ import HeaderMenuItem from "./header-menu-item/HeaderMenuItem";
 import MenuItem from "./menu-item/MenuItem";
 import sprite from './../../components/components/sprite/sprite.svg';
 import MenuBurger from "./menu-burger/MenuBurger";
+import IconMenu from "./menu-burger/icon-menu/IconMenu";
 
 function Header() {
 
@@ -12,7 +13,7 @@ function Header() {
       <header className={s.header}>
          <div className="container">
             <div className={s.headerBody}>
-               <button type="button" class={s.iconMenu}><span></span></button>
+               <IconMenu/>
                <MenuBurger/>
                <nav class={s.menuBody}>
                   <ul class={s.menuList}>

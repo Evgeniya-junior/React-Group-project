@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 import s from './MenuBurger.module.scss';
 import sprite from './../../../components/components/sprite/sprite.svg';
 
-
 function MenuBurger(props) {
    return (
       <div className={s.menuBurger}>
