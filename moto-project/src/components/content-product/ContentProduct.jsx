@@ -1,12 +1,11 @@
 import s from "./ContentProduct.module.scss";
 import ProductCard from "./product-card/ProductCard";
-import BuyWithProduct from "./../content/buy-with-product/BuyWithProduct";
 
 import { Breadcrumbs } from "@mui/material";
 import Link from '@mui/material/Link';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import ProductTabs from "./product-tabs/ProductTabs";
 
+import ProductTabs from "./product-tabs/ProductTabs";
 import ImageGidro from './../../assets/images/content-product/product-card/gidrotsikl-brp-seedoo-gti-155hp-se.png';
 
 const productData = {
@@ -15,47 +14,42 @@ const productData = {
     code: '366666-2',
     oldPrice: '1 200 475 ₽',
     price: '1 100 475 ₽',
+    made: 'Канада',
+    seats: '3',
+    power: '155',
+    enginesType: 'Бензиновый',
+    year: '2018',
+    characteristic1: 'значение 1',
+    characteristic2: 'значение 2',
+    characteristic3: 'значение 3',
+    characteristic4: 'значение 4',
+    characteristic5: 'значение 5',
 }
-const characteristicData = [
-    ["Производитель","Канада"],
-    ["Количество мест, шт:", "3"],
-    ["Мощность, л.с.", "155"],
-    ["Тип двигателя", "Бензиновый"],
-    ["Год выпуска", "2018"],
-    ["Еще характеристика 1", "значение 1"],
-    ["Еще характеристика 2", "значение 2"],
-    ["Еще характеристика 3", "значение 3"],
-    ["Еще характеристика 4", "значение 4"],
-    ["Еще характеристика 5", "значение 5"],
-]
-
 
 function ContentProduct(props) {
     return (
         <main className={s.contentProduct}>
             <div className="container">
                     <div className={s.contentBreadcrumb}>
-                        <Breadcrumbs
-                            className={s.breadcrumb} 
-                            aria-label="breadcrumb" 
-                            separator={<NavigateNextIcon fontSize="small" />} 
-                            aria-label="breadcrumb"
-                        >
-                            <Link underline="hover" color="inherit" href="/">
-                                Главная
-                            </Link>
-                            <Link underline="hover" color="inherit" href="/jetskis/">
-                                Гидроциклы
-                            </Link>
-                            <span>{productData.title}</span>
-                        </Breadcrumbs>
+                    <Breadcrumbs
+                        className={s.breadcrumb}
+                        aria-label="breadcrumb"
+                        separator={<NavigateNextIcon fontSize="small" />}
+                        aria-label="breadcrumb"
+                    >
+                        <Link underline="hover" color="inherit" href="/">
+                            Главная
+                        </Link>
+                        <Link underline="hover" color="inherit" href="/jetskis/">
+                            Гидроциклы
+                        </Link>
+                        <span>{productData.title}</span>
+                    </Breadcrumbs>
                     </div>
-                    <ProductCard productData={productData} characteristicData={characteristicData}/>
+                    <ProductCard productData={productData}/>
                     <ProductTabs/>
-                <BuyWithProduct className={s.buyWithProduct} title='С этим товаром покупают' 
-                    text1='запчасти' text2='моторы' text3='шины' text4='электроника' 
-                    text5='инструменты' text6='аксессуары'
-                />
+                <h3>С этим товаром покупают .....</h3>
+                <h3>тут будет слайдер</h3>
             </div>
         </main>
     );

@@ -1,17 +1,22 @@
-@import './../../../sass/mixins.scss';
-@import './../../../sass/vars.scss';
+@import './../../../../sass/mixins.scss';
+@import './../../../../sass/vars.scss';
 
 .searchShop{
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 35px;
+    @include media (md) {
+        flex-direction: column;
+    }
 
     &InnerForm {
             flex: 1 1 395px;
             display: flex;
             align-items: center;
             gap: 20px;
+            @include media (md) {
+                flex: 1 1 auto;
+            }
             @include media (s) {
                 flex-direction: column;
                 align-items: flex-start;
@@ -35,6 +40,9 @@
 
 .fieldset {
     flex: 1 1 434px;
+    @include media (md) {
+        flex: 1 1 auto;
+    }
     @include media (s) {
         max-width: 313px;
         width: 100%;
@@ -42,9 +50,10 @@
 }
 .radioWrapper {
     display: flex;
+    gap: 55px;
     @include media (s) {
         flex-direction: column;
-
+        gap: 15px;
         label {
             display: flex;
             flex-direction: row-reverse;

@@ -1,5 +1,5 @@
 import s from "./SearchForm.module.scss";
-import searchIcon from './../../../../assets/images/content-product/search/Search.svg';
+import searchIcon from './../../../../../assets/images/content-product/search/Search.svg';
 
 
 function SearchForm() {

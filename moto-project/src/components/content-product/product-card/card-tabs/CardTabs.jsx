@@ -76,10 +76,10 @@ export default function CardTabs(props) {
                 </TabsList>
             </div>
             <TabPanel value={0}>
-                <SpecsTable characteristicData={props.characteristicData} />
+                <SpecsTable productData={props.productData} />
             </TabPanel>
             <TabPanel value={1}>
-                        Наличие в магазине
+                Наличие в магазине
             </TabPanel>
         </TabsUnstyled>
     );

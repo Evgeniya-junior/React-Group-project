@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import SearchShop from '../search-shop/SearchShop';
-import AddressTable from '../address-table/AddressTable';
+import SearchShop from './search-shop/SearchShop';
+import AddressTable from './address-table/AddressTable';
 
 import s from './ProductTabs.module.scss';
 import { styled } from '@mui/system';
@@ -68,21 +68,14 @@ const TabPanel = styled(TabPanelUnstyled)`
 `;
 
 const TabsList = styled(TabsListUnstyled)`
-    background-color: transparent;
-    display: flex;
-    justify-content: space-between;
-    @media screen and (max-width: 992px) {
-        flex-direction: column;
-        gap: 35px;
-        align-items: flex-start;
-    }
+    
 `;
 
 export default function ProductTabs() {
     return (
         <TabsUnstyled defaultValue={3}>
             <div className={s.tabListWrapper}>
-                <TabsList>
+                <TabsList className={s.tabList}>
                     <Tab>О товаре</Tab>
                     <Tab>Характеристики</Tab>
                     <Tab>Отзывы</Tab>
