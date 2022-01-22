@@ -1,6 +1,6 @@
 import s from "./CatalogCard.module.scss";
 import * as React from 'react';
-import CheckboxFavorite from '../../content-product/components/checkbox-favorite/CheckboxFavorite';
+import CheckboxFavorite from '../../content-product/components/checkbox-favorite//CheckboxFavorite';
 
 
 import cartIcon from './../../../assets/images/catalog-card/cart.svg';

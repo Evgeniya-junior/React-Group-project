@@ -5,10 +5,13 @@ import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import Link from '@mui/material/Link';
+
 import { Accordion, Button } from '@mui/material';
 import NavCatalog from './nav-Catalog/NavCatalog';
 import Pagination from '@mui/material/Pagination';
-import CatalogCard from './catalog-card/CatalogCard';
+import { PaginationItem } from '@mui/material';
+import CatalogCard from './../components/catalog-card/CatalogCard';
+import { styled } from '@mui/material/styles';
 
 // ProductCard ------------------
 import img01 from './../../assets/images/catalog-card/image/01.jpg';
@@ -24,7 +27,6 @@ import img10 from './../../assets/images/catalog-card/image/10.jpg';
 import img11 from './../../assets/images/catalog-card/image/11.jpg';
 import img12 from './../../assets/images/catalog-card/image/12.jpg';
 
-
 const dataCatalogCards = [
     ["Гидроцикл BRP SeaDoo GTI 130hp SE Black / Mango",img01,"1 049 500 ₽",""],
     ["Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic",img02,"1 100 475 ₽","+"],
@@ -39,6 +41,15 @@ const dataCatalogCards = [
     ["Гидроцикл BRP Sea-doo Spark 2-UP 900 Ace Vanilla",img11,"","+"],
     ["Гидроцикл Spark 3-UP 900 HO Ace IBR Blueberry",img12,"",""],
 ]
+
+const MyPagination = styled(Pagination)`
+    & .Mui-selected {
+        border-radius: 0;
+        border: 2px solid #1C62CD;
+        color: #1C62CD;
+        background-color: #fff !important;
+    }
+`;
 
 function ContentCatalog(props) {
 return (
@@ -119,7 +130,7 @@ return (
                             sale={dataCatalogCards[11][3]}/>
                     </div>
                     <div className={s.catalogFooter}>
-                        <Pagination count={11} variant="outlined" shape="rounded" color='primary' />
+                        <MyPagination className={s.pagination} count={11} hidePrevButton hideNextButton shape="rounded"/>
                     </div>
                 </div>
             </div>
