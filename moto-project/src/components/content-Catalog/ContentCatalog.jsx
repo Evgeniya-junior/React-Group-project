@@ -9,8 +9,7 @@ import Link from '@mui/material/Link';
 import { Accordion, Button } from '@mui/material';
 import NavCatalog from './nav-Catalog/NavCatalog';
 import Pagination from '@mui/material/Pagination';
-import { PaginationItem } from '@mui/material';
-import CatalogCard from './../components/catalog-card/CatalogCard';
+import ProductCard from './../components/product-card/ProductCard';
 import { styled } from '@mui/material/styles';
 
 // ProductCard ------------------
@@ -68,62 +67,62 @@ return (
                 <Filter />
                 <div className={s.catalogBody}>
                     <div className={s.catalogContent}>
-                        <CatalogCard 
+                        <ProductCard 
                             title={dataCatalogCards[0][0]} 
                             image={dataCatalogCards[0][1]}
                             price={dataCatalogCards[0][2]}
                             sale={dataCatalogCards[0][3]}/>
-                        <CatalogCard 
+                        <ProductCard 
                             title={dataCatalogCards[1][0]} 
                             image={dataCatalogCards[1][1]}
                             price={dataCatalogCards[1][2]}
                             sale={dataCatalogCards[1][3]}/>
-                        <CatalogCard 
+                        <ProductCard 
                             title={dataCatalogCards[2][0]} 
                             image={dataCatalogCards[2][1]}
                             price={dataCatalogCards[2][2]}
                             sale={dataCatalogCards[2][3]}/>
-                        <CatalogCard
+                        <ProductCard
                             title={dataCatalogCards[3][0]} 
                             image={dataCatalogCards[3][1]}
                             price={dataCatalogCards[3][2]}
                             sale={dataCatalogCards[3][3]}/>
-                        <CatalogCard 
+                        <ProductCard 
                             title={dataCatalogCards[4][0]} 
                             image={dataCatalogCards[4][1]}
                             price={dataCatalogCards[4][2]}
                             sale={dataCatalogCards[4][3]}/>
-                        <CatalogCard 
+                        <ProductCard 
                             title={dataCatalogCards[5][0]} 
                             image={dataCatalogCards[5][1]}
                             price={dataCatalogCards[5][2]}
                             sale={dataCatalogCards[5][3]}/>
-                        <CatalogCard 
+                        <ProductCard 
                             title={dataCatalogCards[6][0]} 
                             image={dataCatalogCards[6][1]}
                             price={dataCatalogCards[6][2]}
                             sale={dataCatalogCards[6][3]}/>
-                        <CatalogCard 
+                        <ProductCard 
                             title={dataCatalogCards[7][0]} 
                             image={dataCatalogCards[7][1]}
                             price={dataCatalogCards[7][2]}
                             sale={dataCatalogCards[7][3]}/>
-                        <CatalogCard 
+                        <ProductCard 
                             title={dataCatalogCards[8][0]} 
                             image={dataCatalogCards[8][1]}
                             price={dataCatalogCards[8][2]}
                             sale={dataCatalogCards[8][3]}/>
-                        <CatalogCard 
+                        <ProductCard 
                             title={dataCatalogCards[9][0]} 
                             image={dataCatalogCards[9][1]}
                             price={dataCatalogCards[9][2]}
                             sale={dataCatalogCards[9][3]}/>
-                        <CatalogCard
+                        <ProductCard
                             title={dataCatalogCards[10][0]} 
                             image={dataCatalogCards[10][1]}
                             price={dataCatalogCards[10][2]}
                             sale={dataCatalogCards[10][3]}/>
-                        <CatalogCard
+                        <ProductCard
                             title={dataCatalogCards[11][0]} 
                             image={dataCatalogCards[11][1]}
                             price={dataCatalogCards[11][2]}

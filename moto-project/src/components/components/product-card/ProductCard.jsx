@@ -1,13 +1,13 @@
-import s from "./CatalogCard.module.scss";
+import s from "./ProductCard.module.scss";
 import * as React from 'react';
-import CheckboxFavorite from '../../content-product/components/checkbox-favorite//CheckboxFavorite';
+import CheckboxFavorite from '../../content-product/components/checkbox-favorite/CheckboxFavorite';
 
 
 import cartIcon from './../../../assets/images/catalog-card/cart.svg';
 
-function CatalogCard(props) {
+function ProductCard(props) {
     return (
-        <div className={s.catalogCard}>
+        <div className={s.productCard}>
             {props.sale ? 
                 <span className={s.sale}>SALE</span> : 
                 <span></span>
@@ -27,22 +27,22 @@ function CatalogCard(props) {
                     {props.title}
                 </a>
             </h2>
-            {props.price ? 
-                <div className={s.catalogCardBody}>
-                    <div className={s.price}>{props.price}</div>
-                    <div className={s.cart}>
+            <div className={s.productCardBody}>
+                {props.price ? 
+                    <div>
+                        <div className={s.price}>{props.price}</div>
+                        <div className={s.cart}>
                         <img src={cartIcon} alt="Корзина" />
-                    </div>
-                </div> : 
-                <div className={s.catalogCardBody}>
-                    <div className={s.noPrice}>
-                        <p className={s.noPriceText}>нет в наличии</p>
-                        <a href="" className={s.message}>Сообщить о поступлении</a>
-                    </div>
-                </div>
-            }
+                        </div>
+                    </div> : 
+                        <div className={s.noPrice}>
+                            <p className={s.noPriceText}>нет в наличии</p>
+                            <a href="" className={s.message}>Сообщить о поступлении</a>
+                        </div>
+                }
+            </div>
         </div>
     );
 }
-export default CatalogCard;
+export default ProductCard;
 
