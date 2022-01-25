@@ -9,11 +9,24 @@ import 'swiper/modules/navigation/navigation.scss'; // Navigation module
 
 import s from './Swiper.module.scss';
 import AdviseProducts from './../advise-products/AdviseProducts';
+import ProductCard from '../../components/product-card/ProductCard';
 
-import img1 from './../../../assets/images/content-product/swiper/backpack.png';
-import img2 from './../../../assets/images/content-product/swiper/life-jacket.png';
-import img3 from './../../../assets/images/content-product/swiper/audio-system.png';
-import img4 from './../../../assets/images/content-product/swiper/rescue-equipment.png';
+// ProductCard ------------------
+import img01 from './../../../assets/images/content-product/swiper/backpack.png';
+import img02 from './../../../assets/images/content-product/swiper/life-jacket.png';
+import img03 from './../../../assets/images/content-product/swiper/audio-system.png';
+import img04 from './../../../assets/images/content-product/swiper/rescue-equipment.png';
+
+
+const dataSwiper = [
+    ["Водонепроницаемый Рюкзак",img01,"9 800 ₽",""],
+    ["Спасательный жилет BRP Men's Airflow PFD",img02,"6 900 ₽","+"],
+    ["BRP Audio-Premium System",img03,"68 000 ₽",""],
+    ["Спасательное снаряжение",img04,"","+"],
+]
+
+
+
 
 
 // eslint-disable-next-line
@@ -35,14 +48,34 @@ export default () => {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
             >
-                <SwiperSlide className={s.slide}><AdviseProducts span='' image={img1} title='Водонепроницаемый Рюкзак' price='9 800 ₽'/></SwiperSlide>
-                <SwiperSlide className={s.slide}><AdviseProducts span='SALE' image={img2} title="Спасательный жилет BRP Men's Airflow PFD" price='6 900 ₽'/></SwiperSlide>
-                <SwiperSlide className={s.slide}><AdviseProducts span='' image={img3} title='BRP Audio-Premium System' price='68 000 ₽'/></SwiperSlide>
-                <SwiperSlide className={s.slide}><AdviseProducts span='SALE' image={img4} title='Спасательное снаряжение' price='нет в наличии'/></SwiperSlide>
-                <SwiperSlide className={s.slide}><AdviseProducts span='' image={img1} title='Водонепроницаемый Рюкзак' price='9 800 ₽'/></SwiperSlide>
-                <SwiperSlide className={s.slide}><AdviseProducts span='SALE' image={img2} title="Спасательный жилет BRP Men's Airflow PFD" price='6 900 ₽'/></SwiperSlide>
-                <SwiperSlide className={s.slide}><AdviseProducts span='' image={img3} title='BRP Audio-Premium System' price='68 000 ₽'/></SwiperSlide>
-                <SwiperSlide className={s.slide}><AdviseProducts span='SALE' image={img4} title='Спасательное снаряжение' price='нет в наличии'/></SwiperSlide>
+                <SwiperSlide className={s.slide}>
+                    <ProductCard 
+                        title={dataSwiper[0][0]} 
+                        image={dataSwiper[0][1]}
+                        price={dataSwiper[0][2]}
+                        sale={dataSwiper[0][3]}/>
+                </SwiperSlide>
+                <SwiperSlide className={s.slide}>
+                    <ProductCard
+                        title={dataSwiper[1][0]}
+                        image={dataSwiper[1][1]}
+                        price={dataSwiper[1][2]}
+                        sale={dataSwiper[1][3]} />
+                </SwiperSlide>
+                <SwiperSlide className={s.slide}>
+                    <ProductCard
+                        title={dataSwiper[2][0]}
+                        image={dataSwiper[2][1]}
+                        price={dataSwiper[2][2]}
+                        sale={dataSwiper[2][3]} />
+                </SwiperSlide>
+                <SwiperSlide className={s.slide}>
+                    <ProductCard
+                        title={dataSwiper[3][0]}
+                        image={dataSwiper[3][1]}
+                        price={dataSwiper[3][2]}
+                        sale={dataSwiper[3][3]} />
+                </SwiperSlide>      
             </Swiper>
             <div className={`button-prev ${s.prev}`} ></div>
             <div className={`button-next ${s.next}`} ></div>
