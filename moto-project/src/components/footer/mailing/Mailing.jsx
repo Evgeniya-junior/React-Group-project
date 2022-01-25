@@ -24,16 +24,16 @@ const TextFieldCost = styled(TextField)({
             borderColor: '#80bdff',
             boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
           },
-    },  
+    },
     // '&.MuiFormLabel-root.MuiInputLabel-root':{
     //     fontFamily: 'SFProDisplayRegular',
     //     fontSize:' 14px',
     //     lineHeight: '17px',
     //     color: '#C4C4C4'
-    // },  
+    // },
   });
   const BootstrapInput = styled(InputBase)(({ theme }) => ({
-    
+
     '& .MuiInputBase-input': {
       color: '#C4C4C4',
       borderRadius: 0,
@@ -65,7 +65,7 @@ function Mailing(props) {
 
    return (
         <div className={s.mailing}>
-            <h3 className={s.header}>Подпишитесь на нашу рассылку и узнавайте о акция быстрее</h3>
+            <h3 className={s.header}>Подпишитесь на нашу рассылку и узнавайте о акциях быстрее</h3>
             <div className={s.form}>
             <FormControl variant="standard">
             <InputLabel shrink htmlFor="bootstrap-input"></InputLabel>
@@ -75,7 +75,7 @@ function Mailing(props) {
                 <Button variant="contained" style={{borderRadius:"0px",height:"33px"}}>Отправить</Button>
             </div>
             {/* <Form placeholder='Введите ваш e-mail:' text='Отправить'/> */}
-        </div> 
+        </div>
    );
 }
 
