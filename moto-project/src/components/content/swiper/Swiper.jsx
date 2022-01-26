@@ -1,7 +1,7 @@
 // Direct React component imports
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 // Core modules imports are same as usual
-import { Navigation } from 'swiper';
+import { Navigation} from 'swiper';
 
 // Styles must use direct files imports
 import 'swiper/swiper.scss'; // core Swiper
@@ -34,7 +34,7 @@ export default () => {
 
     return (
         <div className={s.wrapper}>
-            <Swiper
+            <Swiper className={s.swiper}
             // install Swiper modules
             modules={[Navigation]}
             spaceBetween={30}

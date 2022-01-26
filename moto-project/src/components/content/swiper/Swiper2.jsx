@@ -28,7 +28,7 @@ export default () => {
 
     return (
         <div className={s.wrapper}>
-            <Swiper
+            <Swiper className={s.swiper}
             // install Swiper modules
             modules={[Navigation]}
             spaceBetween={30}
