@@ -25,10 +25,6 @@ const dataSwiper = [
     ["Спасательное снаряжение",img04,"","+"],
 ]
 
-
-
-
-
 // eslint-disable-next-line
 export default () => {
 

@@ -4,8 +4,9 @@ import s from "./Header.module.scss";
 import HeaderMenuItem from "./header-menu-item/HeaderMenuItem";
 import MenuItem from "./menu-item/MenuItem";
 import sprite from './../../components/components/sprite/sprite.svg';
-import MenuBurger from "./menu-burger/MenuBurger";
-import IconMenu from "./menu-burger/icon-menu/IconMenu";
+
+import NavState from './burger/context/navState';
+import MainMenu from './burger/MainMenu';
 
 function Header() {
 
@@ -13,8 +14,9 @@ function Header() {
       <header className={s.header}>
          <div className="container">
             <div className={s.headerBody}>
-               <IconMenu/>
-               <MenuBurger/>
+               <NavState>
+                  <MainMenu />
+               </NavState>
                <nav class={s.menuBody}>
                   <ul class={s.menuList}>
                      <MenuItem text="Магазины" link="/shops"/>

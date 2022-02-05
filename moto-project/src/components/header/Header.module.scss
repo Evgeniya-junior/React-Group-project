@@ -3,23 +3,28 @@
 
 .header {
    margin-bottom: 45px;
+
    @media (max-width: 992px) {
       margin-bottom: 25px;
    }
 }
+
 .headerBody {
    min-height: 122px;
    display: flex;
    justify-content: space-between;
    align-items: center;
+
    @media (max-width: 992px) {
       flex-wrap: wrap;
       padding-top: 25px;
+      row-gap: 15px;
    }
 }
 
 .menuBody {
    flex: 0 1 calc(450/1171*100%);
+
    @media (max-width: 992px) {
       order: 2;
       flex-basis: 100%;
@@ -28,10 +33,12 @@
       padding: 0 3px;
    }
 }
+
 .menuList {
    display: flex;
    justify-content: space-between;
    align-items: center;
+
    &:not(:last-child) {
       margin-right: 10px;
    }
@@ -41,25 +48,28 @@
    }
 }
 
-
 .logo {
    flex: 1 0 90px;
    text-align: center;
 }
+
 .logoLink {
    display: inline-flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
 }
+
 .logoImage {
    width: 53px;
    height: 42px;
    margin-bottom: 10px;
+
    @media (max-width: 992px) {
       display: none;
    }
 }
+
 .logoText {
    font-family: 'Staatliches';
    line-height: 25px;
@@ -70,13 +80,13 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+
    @media (max-width: 992px) {
       flex-basis: auto;
    }
 }
-.location {
 
-}
+.location {}
 
 .locationLink {
    line-height: 24px;
@@ -84,6 +94,7 @@
    display: flex;
    position: relative;
    padding-left: 25px;
+
    &::before {
       content: '';
       background-image: url('./../../assets/images/icon-svg/location.svg');
@@ -95,9 +106,11 @@
       left: 0;
       bottom: 1px;
    }
+
    &:hover {
       text-decoration: underline;
    }
+
    @media (max-width: 992px) {
       display: none;
    }
@@ -106,13 +119,15 @@
 .actions {
    padding-right: 22px;
 }
-.actionsList{
+
+.actionsList {
    display: flex;
    gap: 10px;
 }
 
 .actionsItem {
    transition: transform ease-out .15s;
+
    &:hover {
       transform: translateY(-5px);
    }
@@ -121,6 +136,7 @@
 .cart {
    position: relative;
 }
+
 .cartCount {
    font-weight: 500;
    font-size: 10px;
@@ -147,13 +163,16 @@
    background-color: $baseColor;
    display: grid;
    align-items: center;
+
    @media (max-width: 992px) {
       display: none;
    }
 }
+
 .headerMenuBody {
    padding: 0px 2px;
 }
+
 .headerMenuList {
    display: flex;
    justify-content: space-between;
