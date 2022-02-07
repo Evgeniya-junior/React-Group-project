@@ -7,6 +7,7 @@ import sprite from './../../components/components/sprite/sprite.svg';
 
 import NavState from './burger/context/navState';
 import MainMenu from './burger/MainMenu';
+import { NavLink } from "react-router-dom";
 
 function Header() {
 
@@ -24,43 +25,43 @@ function Header() {
                      <MenuItem text="Доставка и оплата" link="/delivery"/>
                   </ul>
                </nav>
-               <div class={s.logo}>
-                  <a  class={s.logoLink} href="#">
-                     <svg class={s.logoImage} width="53" height="43" viewBox="0 0 53 43">
+               <div className={s.logo}>
+                  <NavLink className={s.logoLink} to="/">
+                     <svg className={s.logoImage} width="53" height="43" viewBox="0 0 53 43">
                         <use xlinkHref={sprite + "#logo"}></use>
                      </svg>
                      <span class={s.logoText}>DRIVE MOTO</span>
-                  </a>
+                  </NavLink>
                </div>
                <div className={s.rightBlock}>
                   <div className={s.location}>
-                     <a href="#" className={s.locationLink}>
+                     <NavLink to="/" className={s.locationLink}>
                         <span>Москва,  ул. Науки  25</span>
-                     </a>
+                     </NavLink>
                   </div>
                   <div className={s.actions}>
                      <ul className={s.actionsList}>
                         <li className={s.actionsItem}>
-                           <a href="#" className={s.favorite}>
+                           <NavLink to="/" className={s.favorite}>
                               <svg width="24" height="24" viewBox="0 0 24 24">
                                  <use xlinkHref={sprite + "#favorite"}></use>
                               </svg>
-                           </a>
+                           </NavLink>
                         </li>
                         <li className={s.actionsItem}>
-                           <a href="#" className={s.user}>
+                           <NavLink to="/" className={s.user}>
                               <svg width="25" height="24" viewBox="0 0 25 24">
                                  <use xlinkHref={sprite + "#user"}></use>
                               </svg>
-                           </a>
+                           </NavLink>
                         </li>
                         <li className={s.actionsItem}>
-                           <a href="#" className={s.cart}>
+                           <NavLink to="/" className={s.cart}>
                               <svg width="31" height="23" viewBox="0 0 31 23">
                                  <use xlinkHref={sprite + "#cart"}></use>
                               </svg>
                               <span className={s.cartCount}>1</span>
-                           </a>
+                           </NavLink>
                         </li>
                      </ul>
                   </div>

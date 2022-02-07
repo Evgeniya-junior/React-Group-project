@@ -1,5 +1,4 @@
 import React, { useRef, useContext } from 'react';
-import styled from 'styled-components';
 import useOnClickOutside from '../burger/hooks/onClickOutside';
 import { MenuContext } from '../burger/context/navState';
 import HamburgerButton from '../burger/HamburgerButton';

@@ -10,6 +10,11 @@ const MenuButton = styled.div`
   height: 27px;
   cursor: pointer;
   z-index: 100000;
+  transition: z-index 0.5s ease 0s;
+  &.active {
+    visability: hidden;
+    z-index: 0;
+  }
 
   span,
   &::before,
@@ -42,12 +47,14 @@ const MenuButton = styled.div`
       top: calc(50% - 1px);
       transform: rotate(-45deg);
       background-color: #1C62CD;
+      opacity: 0;
     }
 
     &::after {
         bottom: calc(50% - 1px);
         transform: rotate(45deg);
         background-color: #1C62CD;
+        opacity: 0;
     }
 
     span {
@@ -61,6 +68,7 @@ const MenuButton = styled.div`
         border-radius: 50%;
         z-index: -1;
         border: 1px solid #1C62CD;
+        opacity: 0;
     }
   }  
 }

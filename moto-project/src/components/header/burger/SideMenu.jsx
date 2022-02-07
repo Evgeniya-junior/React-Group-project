@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import { MenuContext } from '../burger/context/navState';
 import sprite from './../../../components/components/sprite/sprite.svg';
 import s from './SideMenu.module.scss';
+import { NavLink } from 'react-router-dom';
 
 const Menu = styled.nav`
 @media (max-width: 992px) {
@@ -42,83 +43,83 @@ SideMenu.defaultProps = {
                 <nav>
                     <ul>
                         <li className={s.menuBurgerItem}>
-                            <a href="" className={s.menuBurgerLink}>
+                            <NavLink to="/" className={s.menuBurgerLink}>
                                 <svg class={s.icon} width="20" height="20" viewBox="0 0 20 20">
                                     <use xlinkHref={sprite + "#user"}></use>
                                 </svg>
                                 <span>Войти</span>
-                            </a>
+                            </NavLink>
                         </li>
                         <li className={s.menuBurgerItem}>
-                            <a href="" className={s.menuBurgerLink}>
+                            <NavLink to="/" className={s.menuBurgerLink}>
                                 <svg class={s.icon} width="20" height="20" viewBox="0 0 20 20">
                                     <use xlinkHref={sprite + "#user"}></use>
                                 </svg>
                                 <span>Регистрация</span>
-                            </a>
+                            </NavLink>
                         </li>
                         <li className={s.menuBurgerItem}>
-                            <a href="" className={s.menuBurgerLink}>
+                            <NavLink to="/" className={s.menuBurgerLink}>
                                 <svg class={s.icon} width="20" height="18" viewBox="0 0 20 18">
                                     <use xlinkHref={sprite + "#favorite"}></use>
                                 </svg>
                                 <span>Избранное</span>
-                            </a>
+                            </NavLink>
                         </li>
                         <li className={s.menuBurgerItem}>
-                            <a href="" className={s.menuBurgerLink}>
+                            <NavLink to="/" className={s.menuBurgerLink}>
                                 <svg class={s.icon} width="30" height="23" viewBox="0 0 30 23">
                                     <use xlinkHref={sprite + "#cart"}></use>
                                 </svg>
                                 <span>Корзина</span>
-                            </a>
+                            </NavLink>
                         </li>
                         <li className={s.menuBurgerItem}>
-                            <a href="" className={s.menuBurgerLink}>
+                            <NavLink to="/" className={s.menuBurgerLink}>
                                 <svg class={s.icon} width="16" height="19" viewBox="0 0 16 19">
                                     <use xlinkHref={sprite + "#shop"}></use>
                                 </svg>
                                 <span>Магазины</span>
-                            </a>
+                            </NavLink>
                         </li>
                         <li className={s.menuBurgerItem}>
-                            <a href="" className={s.menuBurgerLink}>
+                            <NavLink to="/" className={s.menuBurgerLink}>
                                 <svg class={s.icon} width="17" height="26" viewBox="0 0 17 26">
                                     <use xlinkHref={sprite + "#percentage"}></use>
                                 </svg>
                                 <span>Акции</span>
-                            </a>
+                            </NavLink>
                         </li>
                         <li className={s.menuBurgerItem}>
-                            <a href="" className={s.menuBurgerLink}>
+                            <NavLink to="/" className={s.menuBurgerLink}>
                                 <svg class={s.icon} width="16" height="15" viewBox="0 0 16 15">
                                     <use xlinkHref={sprite + "#delivery"}></use>
                                 </svg>
-                                <span>Доставка и оплата</span></a>
+                                <span>Доставка и оплата</span></NavLink>
                         </li>
                         <li className={s.menuBurgerItem}>
-                            <a href="" className={s.menuBurgerLink}>Квадроциклы</a>
+                            <NavLink to="/" className={s.menuBurgerLink}>Квадроциклы</NavLink>
                         </li>
                         <li className={s.menuBurgerItem}>
-                            <a href="" className={s.menuBurgerLink}>Катера</a>
+                            <NavLink to="/" className={s.menuBurgerLink}>Катера</NavLink>
                         </li>
                         <li className={s.menuBurgerItem}>
-                            <a href="" className={s.menuBurgerLink}>Гидроциклы</a>
+                            <NavLink to="/" className={s.menuBurgerLink}>Гидроциклы</NavLink>
                         </li>
                         <li className={s.menuBurgerItem}>
-                            <a href="" className={s.menuBurgerLink}>Лодки</a>
+                            <NavLink to="/" className={s.menuBurgerLink}>Лодки</NavLink>
                         </li>
                         <li className={s.menuBurgerItem}>
-                            <a href="" className={s.menuBurgerLink}>Вездеходы</a>
+                            <NavLink to="/" className={s.menuBurgerLink}>Вездеходы</NavLink>
                         </li>
                         <li className={s.menuBurgerItem}>
-                            <a href="" className={s.menuBurgerLink}>Снегоходы</a>
+                            <NavLink to="/" className={s.menuBurgerLink}>Снегоходы</NavLink>
                         </li>
                         <li className={s.menuBurgerItem}>
-                            <a href="" className={s.menuBurgerLink}>Двигатели</a>
+                            <NavLink to="/" className={s.menuBurgerLink}>Двигатели</NavLink>
                         </li>
                         <li className={s.menuBurgerItem}>
-                            <a href="" className={s.menuBurgerLink}>Запчасти</a>
+                            <NavLink to="/" className={s.menuBurgerLink}>Запчасти</NavLink>
                         </li>
                     </ul>
                     <p className={s.menuBurgerLocation}>Москва,<br /> ул. Науки  25</p>
